@@ -1,0 +1,934 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="记录生活，记录代码，给自己的网络生涯留下一笔精神财富">
+  
+  <meta name="author" content="WeiCN">
+  <meta name="keywords" content="weicn,春风吹,WeiCN的博客,浅秋枫影,武阳破晓的博客,浅秋枫影的博客">
+  
+  <title>春风吹 - 浅秋枫影的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"cuojue.org","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":true,"baidu":"c987613129741480f7d9ce1f782ca4f3","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"kzJfmFQNH3K5t6CfwIQWTnDG-gzGzoHsz","app_key":"XSFm5vuIAItqV5RLj3Xn3hrr","server_url":"https://leancloud-api.cuojue.org"}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="manifest" href="/manifest.json" /></head>
+
+
+<body>
+  <header style="height: 30vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>浅秋枫影</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/about/">
+                    
+                    About Me
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" href="https://cuojue.org/go/?aHR0cHM6Ly9zdGF0dXMuY3VvanVlLm9yZw==" rel="noopener external nofollow noreferrer">
+                    
+                    Server Status
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://code.bdstatic.com/npm/logicdn@1.0.0/logi.im/usr/images/random/11.webp?imageView2/2/w/320/q/75') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="浅秋枫影的博客">
+              
+            </span>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/ssr_free_traffic.html">浅谈一下ssr免流的实现方式</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/ssr_free_traffic.html">
+          
+          
+            
+          
+          免流,就是使用流量不计费如何让运营商不计费呢,那就是利用运营商本身的免费项目来达到我们的目的.比如一些基本的端口都是不计费的,比如53(DNS解析),138(NetBIOS)…另外比如运营商的官方网站(10086.cn/10010.com/189.cn)等…免流就是利用运营商网关检测流量的去向/端口来欺骗运营商,让运营商认为我们的流量是免费部分.
+
+前面讲了用OPENVPN来实现免流https:/
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-01-09 18:53" pubdate>
+              2017-01-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/default/">默认分类</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/build_ss_panel.html">搭建一个自己的ssr前后端</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/build_ss_panel.html">
+          
+          
+            
+          
+          
+搭建这个服务纯粹是为了,免那啥流,加之自家网络已经进入自由的Intelnet,免那啥流的同时,手机也可以自由进入”互联网”.毕竟家里放一台Gen8也是要吃电费的,不用白不用
+
+
+###前端安装
+（本文的演示环境为CentOS 7.3.1611）
+首先也是安装军哥的lnmp(好东西,方便不少!)
+1234wget http://soft.vpser.net/lnmp/lnmp1.3-full.ta
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-01-08 17:48" pubdate>
+              2017-01-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/code/">代码分享</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/esxi_apc_ups.html">ESXi加UPS断电自动关机脚本</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/esxi_apc_ups.html">
+          
+          
+            
+          
+          被电力局搞怕了,随时都可以停电,并且没有通知!今年已经好几次了!怀疑我的硬盘就是这样坏的.随后败了一台UPS,APC的BX550CI-CN,就这个样子没有USB接口,服务器不能知晓是否UPS在供电(就算有,ESXi也用不上,尴尬)
+写了一个小脚本,让ESXi来ping网关(路由器,插市电),如果网关3分钟都是失联状态,就判断停电了,自动执行关机命令
+123456789101112131415161
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-01-05 15:17" pubdate>
+              2017-01-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/notes/">个人笔记</a>
+            
+              <a href="/c/notes/code/">代码分享</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/wd_disk_hpe_services.html">西数红盘的质量与HPE的服务</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/wd_disk_hpe_services.html">
+          
+          
+            
+          
+          
+黑东618买的两块特价4T红盘,当时就有一块回家了,现在另外一块还是没撑住,又挂了:roll:黑东服务还是不错的,这次退回去,二话没说,直接换新,第三天就给送来了.
+
+#####谈谈HPE的服务
+
+上半年败了一台GEN8的小服务器,在HPE的官网注册了,留了信息,需要一个公司名字,就随便写了一个(随便起的公司名字,之前用过的网名)
+
+某晚上22点多,接到一个陌生电话,问我是不是某某某公司的某工,
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-01-05 14:11" pubdate>
+              2017-01-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/echo/">闲言碎语</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/esxi_disk.html">ESXI重新挂载磁盘</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/esxi_disk.html">
+          
+          
+            
+          
+          　　京东618活动,在京东买了两块999-30的西数红盘4T塞到HP Gen8里面去了,结果竟然有一块是坏的,掉盘,在ESXI复制文件的过程中直接磁盘丢失,刷新不出来,在ILO里面也是严重错误…:mad:
+
+
+　　遇到这情况,当然是找京东换一块啦.当我拆掉硬盘的之后,进ESXI,什么情况,所有磁盘都丢失了…一块都没了,设备里面也没了.:neutral:
+　　进RAID界面看到一条错误,说是磁盘丢失
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-06-14 13:08" pubdate>
+              2016-06-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/echo/">闲言碎语</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/OpenVPN_Free_Traffic.html">自行搭建高大上的手机终端OpenVPN免流</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/OpenVPN_Free_Traffic.html">
+          
+          
+            
+          
+          
+一直在听大家谈论免流免流,原来一直没明白,具体看了下原来是修改头信息,让运营商服务器认为你是在访问部分免流的服务器(手机营业厅之类的),修改之后,访问正常网络也不会计费,但是局限于终端服务器的上行网速
+
+推荐系统CentOS6.X为什么说我推荐,因为我只会用CentOS,来打我呀上行带宽最少也得有个4M吧,我用的家用宽带配置的,哈哈哈:shock:
+搭建OpenVPN环境1.更新系统1yum u
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-06-08 12:41" pubdate>
+              2016-06-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/notes/">个人笔记</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tag/fastcgi-cache/">fastcgi_cache</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/Typecho_Google_Authenticator.html">为Typecho启用Google Authenticator两步验证</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/Typecho_Google_Authenticator.html">
+          
+          
+            
+          
+          
+看到好多网站都支持Google Authenticator的两步验证，所以写了这个小插件，参考了很多前辈写的插件。
+
+Google Authenticator的PHP实现来自：http://www.phpgangsta.de
+
+2018-11-21 更新最新版 0.0.2 已发布。请前往查看https://cuojue.org/read/Typecho_Google_Authenticator_
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-02 17:10" pubdate>
+              2016-05-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/code/">代码分享</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tag/typecho/">typecho</a>
+            
+              <a href="/tag/Authenticator/">Authenticator</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/typecho_comments_author_javascript.html">修改typecho保存评论用户信息为javascript模式</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/typecho_comments_author_javascript.html">
+          
+          
+            
+          
+          
+修改这个是因为上一篇文章有同学评论说会缓存评论人的信息当然，我没注意到这个是因为我们的Chakhsu同学在老高的技术博客也提到这个问题而我用的模板也是来自于Chakhsu的，所以他在模板里面已经修改过这个问题，直接不读取cookies来回填用户信息我就小小的修改了一下，采用js来读取并回填，登录状态还无所谓，没登陆的用户确实造成了小小的不便（当然，对我这种常年只有我一个人访问的博客没什么影响……
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-26 19:38" pubdate>
+              2016-04-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/code/">代码分享</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tag/typecho/">typecho</a>
+            
+              <a href="/tag/php/">php</a>
+            
+              <a href="/tag/javascript/">javascript</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/typecho-cache-memcache.html">为typecho增加缓存功能,支持memcached缓存</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/typecho-cache-memcache.html">
+          
+          
+            
+          
+          
+更新时间：2020 年 02 月 27 日推荐一下我的Typecho的fastcgi_cache缓存插件
+
+Typecho的fastcgi_cache缓存插件
+以下是本文原文
+
+MostCache再次修改增进版原作者：typecho缓存插件MostCache修改支持memcache作者：为typecho增加文件缓存及memcached缓存功能-MostCache修改增进版
+由于作者表示存在会缓存
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-11 14:16" pubdate>
+              2016-04-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/code/">代码分享</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tag/typecho/">typecho</a>
+            
+              <a href="/tag/memcache/">memcache</a>
+            
+              <a href="/tag/php/">php</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/read/cloudxns_ddns_shell.html">更新cloudxns的ddns的shell脚本</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/read/cloudxns_ddns_shell.html">
+          
+          
+            
+          
+          从dnspod换成cloudxns来解析，由于需要DDNS，之前一直用的 AnripDdns ，换过来之后，找到了 天语空间 的脚本，问题是，如果同时存在相同的解析纪录，会返回多个RECORD ID导致纪录提交失败。比如解析根域，同时存在MX和TXT等纪录，就会导致API接口返回302错误。翻阅了一下官方的API文档，发现有个更合适的DDNS接口，可以直接获取客户端的访问IP来作为DDNS的解析I
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-07 21:17" pubdate>
+              2016-04-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/c/code/">代码分享</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tag/dnspod/">dnspod</a>
+            
+              <a href="/tag/cloudxns/">cloudxns</a>
+            
+              <a href="/tag/ddns/">ddns</a>
+            
+              <a href="/tag/linux/">linux</a>
+            
+              <a href="/tag/shell/">shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <style type="text/css">.tk-footer{visibility: hidden;}.tk-icon{line-height: 1%!important;}</style>
+        </div>
+      </div>
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     &copy;&nbsp;2021 Copyright&nbsp; CuoJue&#39;s Blog  Theme by <a target="_blank" href="https://cuojue.org/go/?aHR0cHM6Ly9naXRodWIuY29tL2ZsdWlkLWRldi9oZXhvLXRoZW1lLWZsdWlk" rel="noopener external nofollow noreferrer">Fluid</a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      $.ajax({
+        type: 'GET',
+        url: 'https://v1.hitokoto.cn',
+        headers: {},
+        dataType: 'json',
+        success: function (result) {
+          var text;
+          if (result) {
+            var keys = 'hitokoto'.split('.')
+            if (result instanceof Array) {
+              result = result[0]
+            }
+            for (const k of keys) {
+              var value = result[k]
+              if (typeof value === 'string') {
+                text = value
+                break
+              } else if (value instanceof Object) {
+                result = value
+              }
+            }
+          }
+          text ? typing(text) : typing(title);
+        },
+        error: function () {
+          typing(title)
+        }
+      })
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c987613129741480f7d9ce1f782ca4f3";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
+</script>
+</body>
+</html>
