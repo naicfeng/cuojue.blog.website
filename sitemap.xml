@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cuojue.org/read/hexo-filter-links.html</loc>
+    
+    <lastmod>2021-03-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cuojue.org/read/start.html</loc>
     
     <lastmod>2021-03-06</lastmod>
@@ -17,13 +24,6 @@
   
   <url>
     <loc>https://cuojue.org/read/typecho-to-hexo.html</loc>
-    
-    <lastmod>2021-03-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cuojue.org/read/hexo-filter-links.html</loc>
     
     <lastmod>2021-03-05</lastmod>
     
