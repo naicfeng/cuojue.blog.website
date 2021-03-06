@@ -1078,7 +1078,7 @@
     <link href="/read/start.html"/>
     <url>/read/start.html</url>
     
-    <content type="html"><![CDATA[<blockquote><p>如果您看到这篇文章,表示您的 blog 已经安装成功.</p></blockquote><p>又开始折腾博客了，最近败了Gen8，装了一个CentOS练手，手痒又开始部署Typecho了，还是好几年前用过，曾经的博客，域名都被别人重新注册了，好多感慨呀</p><p>没错，本博客就是建立在博主家里的Gen8服务器上，用的DNSPOD的DDNS来解析的。啦啦啦，节省了一笔“不菲”的租用费。</p><p>80端口已经封了，只有443是通的，也就是说只能用https来访问了，不知道443可以顶多久~</p><hr><p>已经放到腾讯云的学生机上了,用了又拍云的CDN</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>如果您看到这篇文章,表示您的 blog 已经安装成功.</p></blockquote><p>又开始折腾博客了，最近败了Gen8，装了一个CentOS练手，手痒又开始部署Typecho了，还是好几年前用过，曾经的博客，域名都被别人重新注册了，好多感慨呀</p><p>没错，本博客就是建立在博主家里的Gen8服务器上，用的DNSPOD的DDNS来解析的。啦啦啦，节省了一笔“不菲”的租用费。</p><p>80端口已经封了，只有443是通的，也就是说只能用https来访问了，不知道443可以顶多久~</p><hr><p>已经放到腾讯云的学生机上了,用了又拍云的CDN</p><hr><p>2021-03-06更新</p><p>已经换成hexo了<br><a href="https://cuojue.org/read/typecho-to-hexo.html">把博客程序从 typecho 换成了 Hexo</a></p>]]></content>
     
     
     <categories>
