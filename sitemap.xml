@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cuojue.org/read/lsposed.html</loc>
+    
+    <lastmod>2021-03-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cuojue.org/read/fix-hexo-fluid-theme-comments-and-images.html</loc>
     
     <lastmod>2021-03-07</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://cuojue.org/read/create_server_status_website.html</loc>
     
     <lastmod>2021-03-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cuojue.org/read/lsposed.html</loc>
-    
-    <lastmod>2021-02-15</lastmod>
     
   </url>
   
