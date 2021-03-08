@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>https://cuojue.org/read/ss_update_to_v2ray.html</loc>
-    
-    <lastmod>2018-11-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://cuojue.org/read/typecho_plugin_ga.html</loc>
     
     <lastmod>2018-11-19</lastmod>
@@ -219,30 +212,9 @@
   </url>
   
   <url>
-    <loc>https://cuojue.org/read/haporxy_for_ss.html</loc>
-    
-    <lastmod>2017-01-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://cuojue.org/read/build_ssr_for_arm.html</loc>
     
     <lastmod>2017-01-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cuojue.org/read/ssr_free_traffic.html</loc>
-    
-    <lastmod>2017-01-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cuojue.org/read/build_ss_panel.html</loc>
-    
-    <lastmod>2017-01-08</lastmod>
     
   </url>
   
@@ -642,6 +614,13 @@
   
   <url>
     <loc>https://cuojue.org/tag/%E8%BF%85%E9%9B%B7%E5%BF%AB%E9%B8%9F/</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuojue.org/tag/OpenVPN/</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
