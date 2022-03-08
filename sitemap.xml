@@ -504,6 +504,13 @@
   </url>
   
   <url>
+    <loc>https://cuojue.org/tag/PostViews/</loc>
+    <lastmod>2022-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cuojue.org/tag/clash/</loc>
     <lastmod>2022-03-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -553,13 +560,6 @@
   </url>
   
   <url>
-    <loc>https://cuojue.org/tag/PostViews/</loc>
-    <lastmod>2022-03-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuojue.org/tag/memcache/</loc>
     <lastmod>2022-03-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -581,13 +581,6 @@
   </url>
   
   <url>
-    <loc>https://cuojue.org/tag/javascript/</loc>
-    <lastmod>2022-03-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cuojue.org/tag/ngixn/</loc>
     <lastmod>2022-03-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -596,6 +589,13 @@
   
   <url>
     <loc>https://cuojue.org/tag/ngx-pagespeed/</loc>
+    <lastmod>2022-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuojue.org/tag/javascript/</loc>
     <lastmod>2022-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
