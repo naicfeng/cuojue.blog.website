@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>Cloudflare切换SSL证书颁发者</title>
+    <link href="/read/Cloudflare-certificate-authority.html"/>
+    <url>/read/Cloudflare-certificate-authority.html</url>
+    
+    <content type="html"><![CDATA[<h3 id="写这篇文章的缘由"><a href="#写这篇文章的缘由" class="headerlink" title="写这篇文章的缘由"></a>写这篇文章的缘由</h3><p><br>Cloudflare目前 Free 计划提供两种证书，一种是 <code>DigiCert</code> 根，一种是 <code>ISRG Root X1</code> 根，在控制台使用应该是随机分配的，没办法指定.<br>然后在看Cloudflare API文档的时候，发现了一个文档没有提及的参数 <code>certificate_authority</code> ，实验了一下，可以成功切换证书.</p><h3 id="为啥要更换证书提供者"><a href="#为啥要更换证书提供者" class="headerlink" title="为啥要更换证书提供者"></a>为啥要更换证书提供者</h3><p><br>在 <code>ISRG Root X1</code> 下签发的证书，由于使用了新的ECC证书，所以为了兼容性必须附带两级中间证书.</p><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xl">ISRG R<span class="hljs-function"><span class="hljs-title">oot</span> X1 -&gt;</span> ISRG R<span class="hljs-function"><span class="hljs-title">oot</span> X2 -&gt;</span> E1 -&gt; cuojue.org<br></code></pre></td></tr></table></figure><p>而 <code>DigiCert</code> 下签发的证书兼容性更广，证书链也更短，只有一级中间证书.</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">DigiCert </span><span class="hljs-keyword">Baltimore </span>Root -&gt; <span class="hljs-keyword">Cloudflare </span>Inc <span class="hljs-built_in">ECC</span> CA<span class="hljs-number">-3</span> -&gt; cuojue.<span class="hljs-keyword">org</span><br></code></pre></td></tr></table></figure><p>并且 Let’s Encrypt 在国内还有 OCSP 验证服务器被墙的问题</p><h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p><br>使用 <code>PATCH</code> 方法对cloudflare的api进行请求</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs livescript">curl -X PATCH <span class="hljs-string">&quot;https://api.cloudflare.com/client/v4/zones/你的域名区域ID/ssl/universal/settings&quot;</span> <span class="hljs-string">\</span><br>     -H <span class="hljs-string">&quot;X-Auth-Email: 你的CF邮箱&quot;</span> <span class="hljs-string">\</span><br>     -H <span class="hljs-string">&quot;X-Auth-Key: 你的APIKEY&quot;</span> <span class="hljs-string">\</span><br>     -H <span class="hljs-string">&quot;Content-Type: application/json&quot;</span> <span class="hljs-string">\</span><br>     --data <span class="hljs-string">&#x27;&#123;&quot;enabled&quot;:true,&quot;certificate_authority&quot;:&quot;digicert&quot;&#125;&#x27;</span><br></code></pre></td></tr></table></figure><p>如上的 curl 访问是切换到 <code>DigiCert</code> ，如果想换到 <code>Let&#39;s Encrypt</code> 则修改其中的 <code>digicert</code> 为 <code>lets_encrypt</code></p><p>返回</p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir">&#123;<span class="hljs-string">&quot;result&quot;</span><span class="hljs-symbol">:</span>&#123;<span class="hljs-string">&quot;enabled&quot;</span><span class="hljs-symbol">:true</span>,<span class="hljs-string">&quot;certificate_authority&quot;</span><span class="hljs-symbol">:<span class="hljs-string">&quot;digicert&quot;</span></span>&#125;,<span class="hljs-string">&quot;success&quot;</span><span class="hljs-symbol">:true</span>,<span class="hljs-string">&quot;errors&quot;</span><span class="hljs-symbol">:[]</span>,<span class="hljs-string">&quot;messages&quot;</span><span class="hljs-symbol">:[]</span>&#125;<br></code></pre></td></tr></table></figure><p>就代表成功了，去控制台也可以看到新的证书了~</p><h4 id="获取区域ID和APIKEY的地方"><a href="#获取区域ID和APIKEY的地方" class="headerlink" title="获取区域ID和APIKEY的地方"></a>获取区域ID和APIKEY的地方</h4><p><img src="https://npm.elemecdn.com/nacdn@1.0.30/blog/files/2022/03/Cloudflare-certificate-authority-3.jpg" title="区域ID"></p><p><img src="https://npm.elemecdn.com/nacdn@1.0.30/blog/files/2022/03/Cloudflare-certificate-authority-4.jpg" title="APIKEY"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Cloudflare</tag>
+      
+      <tag>SSL Certificate</tag>
+      
+      <tag>SNI</tag>
+      
+      <tag>Let&#39;s Encrypt</tag>
+      
+      <tag>certificate-authority</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>一键备份脚本backup.sh(新增支持COS/阿里云盘)</title>
     <link href="/read/backup-sh.html"/>
     <url>/read/backup-sh.html</url>
