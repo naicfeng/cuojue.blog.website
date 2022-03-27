@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title>使用QuicTLS编译支持QUIC的nginx</title>
+    <title>使用QuicTLS编译支持QUIC/HTTP3的nginx</title>
     <link href="/read/nginx-quic-h3.html"/>
     <url>/read/nginx-quic-h3.html</url>
     
