@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title>申请来自 Google 的免费 SSL 证书</title>
+    <title>使用 acme.sh 申请 Google 的免费 SSL 证书</title>
     <link href="/read/google-gts-free-ssl.html"/>
     <url>/read/google-gts-free-ssl.html</url>
     
@@ -20,11 +20,11 @@
     
     <tags>
       
-      <tag>ssl</tag>
-      
       <tag>Google</tag>
       
       <tag>GTS</tag>
+      
+      <tag>ssl</tag>
       
       <tag>ACME</tag>
       
