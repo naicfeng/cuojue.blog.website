@@ -4,6 +4,45 @@
   
   
   <entry>
+    <title>申请来自 Google 的免费 SSL 证书</title>
+    <link href="/read/google-gts-free-ssl.html"/>
+    <url>/read/google-gts-free-ssl.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>上个月 30 日，Google Cloud 在其博客发表文章 <a href="https://cloud.google.com/blog/products/identity-security/automate-public-certificate-lifecycle-management-via--acme-client-api">Automate Public Certificates Lifecycle Management via RFC 8555 (ACME)</a> 发布了测试版的自动化公共 CA 管理程序。<br>简而言之就是 Google 也开放了类似于 Let’s Encrypt 的免费证书申请。并且和 Google 各项服务使用相同的根证书。</p></blockquote><h3 id="优劣分析"><a href="#优劣分析" class="headerlink" title="优劣分析"></a>优劣分析</h3><ol><li>可以设置颁发证书的有效期；（最长 90 天，最短 1 天）</li><li>支持多域名及通配符；（与 Let’s Encrypt 相同）</li><li>仅支持 DNS 验证和文件验证，不支持邮件验证；（与 Let’s Encrypt 相同）</li><li>支持 IP 地址，但是仅允许该 IP 地址块的所有者进行验证；（Let’s Encrypt 暂不支持）</li><li>不支持 IDN (International Domain Name, 国际化域名，使用 Punycode 进行编码，形如 xn–1.xn–2).（Let’s Encrypt 已经支持）</li><li>目前签发的证书，即使选择 ECC 类型，证书链的中级证书也是 RSA 的（Let’s Encrypt 已经支持全链 ECC）</li><li>ocsp.pki.goog 有国内节点，访客体验还是很不错的。</li><li>目前有 DNSSEC CAA 问题，在 DNSPod 添加了 DNSSEC 的用户请暂缓申请</li></ol><h3 id="申请准备"><a href="#申请准备" class="headerlink" title="申请准备"></a>申请准备</h3><p>需要准备一个 Google Cloud Platform 的账号</p><p>然后去 <strong><a href="https://docs.google.com/forms/d/1Euhflb5CXpuLik8czElhyAloTZJZobar4086dmlPqXA">点击这里</a></strong> 填写表单申请</p><p>表单里有一项 Google Cloud Project ID，可以通过 <a href="https://console.cloud.google.com/apis/dashboard">https://console.cloud.google.com/apis/dashboard</a> 得到</p><p><img src="https://npm.elemecdn.com/nacdn@1.0.39/blog/files/2022/04/google-gts-free-ssl-1.png" alt="Google Cloud Project ID"></p><h3 id="获取密钥"><a href="#获取密钥" class="headerlink" title="获取密钥"></a>获取密钥</h3><p>填写后大概半天内即可收到一封主题为 <strong>Welcome to Google Cloud Certificate Manager, Public CA</strong> 的邮件。</p><p><img src="https://npm.elemecdn.com/nacdn@1.0.39/blog/files/2022/04/google-gts-free-ssl-2.png" alt="邮件内容"></p><p>等收到后进入到<br><a href="https://console.cloud.google.com/apis/library/publicca.googleapis.com?project=test-1823685">https://console.cloud.google.com/apis/library/publicca.googleapis.com?project=test-1823685</a><br>（test-1823685 为前文提到的 Project ID），单击“启用”，等他圈圈转完。</p><p><img src="https://npm.elemecdn.com/nacdn@1.0.39/blog/files/2022/04/google-gts-free-ssl-3.png" alt="启用"></p><p>然后单击右上角的“激活 Cloud Shell”，打开 Google Cloud Shell</p><p><img src="https://npm.elemecdn.com/nacdn@1.0.39/blog/files/2022/04/google-gts-free-ssl-4.png" alt="Google Cloud Shell"></p><p>键入</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">gcloud beta publicca external-account-keys create<br></code></pre></td></tr></table></figure><p>（可能会弹出授权，授权选允许）</p><p>获取相关凭据，会返回如下一组密钥</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">Created an external account key<br>[b64MacKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>keyId: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]<br></code></pre></td></tr></table></figure><blockquote><p>EAB 密钥使用一次后自动失效；如果没有使用，7 天后也会自动失效。使用 EAB 密钥注册的 ACME 帐户没有过期时间（对证书续期没有影响）。</p></blockquote><h3 id="开始申请"><a href="#开始申请" class="headerlink" title="开始申请"></a>开始申请</h3><p>先更新 <code>acme.sh</code> 到最新版</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">acme.sh --upgrade<br></code></pre></td></tr></table></figure><p>然后运行 <code>acme.sh</code> 注册 ACME 账户</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">acme.sh  --register-account  -m  report@cuojue.org --server google \<br>    --eab-kid xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \<br>    --eab-hmac-key xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br></code></pre></td></tr></table></figure><p>然后就直接用 <code>acme.sh</code> 签发证书，选择 Server 为 Google</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">acme.sh -f --server google --issue \<br>    -d cuojue.org \<br>    -w <span class="hljs-string">&quot;/home/wwwroot/cuojue.org&quot;</span> \<br>    --reloadcmd <span class="hljs-string">&quot;/etc/init.d/nginx reload&quot;</span><br></code></pre></td></tr></table></figure><p>想要 ECC 证书可以指定 key 类型</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">acme.sh -f --server google --issue \<br>    -d cuojue.org --keylength ec-256 \<br>    -w <span class="hljs-string">&quot;/home/wwwroot/cuojue.org&quot;</span> \<br>    --reloadcmd <span class="hljs-string">&quot;/etc/init.d/nginx reload&quot;</span><br></code></pre></td></tr></table></figure><p><img src="https://npm.elemecdn.com/nacdn@1.0.39/blog/files/2022/04/google-gts-free-ssl-5.png" alt="证书"></p><p><img src="https://npm.elemecdn.com/nacdn@1.0.39/blog/files/2022/04/google-gts-free-ssl-6.png" alt="证书"></p><p>参考：</p><ol><li><a href="https://hostloc.com/thread-993780-1-1.html">https://hostloc.com/thread-993780-1-1.html</a></li><li><a href="https://cloud.google.com/public-certificate-authority/docs/quickstart">https://cloud.google.com/public-certificate-authority/docs/quickstart</a></li><li><a href="https://pki.goog/">https://pki.goog</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ssl</tag>
+      
+      <tag>Google</tag>
+      
+      <tag>GTS</tag>
+      
+      <tag>ACME</tag>
+      
+      <tag>acme.sh</tag>
+      
+      <tag>free ssl</tag>
+      
+      <tag>GTS SSL</tag>
+      
+      <tag>Certificates</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用QuicTLS编译支持QUIC/HTTP3的nginx</title>
     <link href="/read/nginx-quic-h3.html"/>
     <url>/read/nginx-quic-h3.html</url>
