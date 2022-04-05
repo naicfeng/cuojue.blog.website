@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Nginx 禁用 AES CBC 系列弱密码</title>
+    <link href="/read/nginx-disable-cbc-ciphers.html"/>
+    <url>/read/nginx-disable-cbc-ciphers.html</url>
+    
+    <content type="html"><![CDATA[<p>由于我的 ciphers 用的简化写法 <code>EECDH+AES128</code> 包含了所有的 AES 算法，如果单独写 GCM CCM CCM-8 得写好长一条。<br>所以我尝试了一下禁用，像 <code>!RC4!MD5</code> 这种，写了 <code>!AES-CBC</code> 之类的，并没有卵效果……</p><p>搜索中发现了 <a href="https://www.bauer-power.net/2019/12/how-to-disable-weak-cbc-ssl-ciphers-in.html">bauer-power</a> 和 <a href="https://security.stackexchange.com/questions/166484/how-to-disable-cbc-mode-ciphers">Stack Exchange</a> 的内容<br>其中写道可以禁用 <code>!SHA1:!SHA256:!SHA384</code> 来曲线救国达到禁用 CBC 的效果</p><blockquote><p>You can use !SHA1:!SHA256:!SHA384 to disable all CBC mode ciphers. There are some non-CBC false positives that will also be disabled (RC4, NULL), but you probably also want to disable them anyway.</p></blockquote><blockquote><p>Note that while GCM and CHACHA20 ciphers have SHA* in their name, they’re not disabled because they use their own MAC algorithm. The SHA* in their name is for <a href="https://crypto.stackexchange.com/questions/26410/whats-the-gcm-sha-256-of-a-tls-protocol/26434#26434">the PRF, not the MAC</a></p></blockquote><p>简单翻译一下就是 AES-GCM 和 CHACHA20 之类的加密，自身已经可以验证消息完整性，不需要额外的 SHA 来计算。</p><p>所以禁用 SHA 后，CBC 自然无法使用</p><p>顺便把 <code>RSA+AES</code> 也禁用了，仅允许 ECDHE_RSA 了。</p><p>现在我用的 ciphers 是</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ssl_ciphers</span> <span class="hljs-string">&quot;TLS13-AES-256-GCM-SHA384:TLS13-CHACHA20-POLY1305-SHA256:TLS13-AES-128-GCM-SHA256:TLS13-AES-128-CCM-8-SHA256:TLS13-AES-128-CCM-SHA256:EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+AES128:EECDH+AES256:!MD5:!SHA1:!SHA256:!SHA384&quot;</span>;<br></code></pre></td></tr></table></figure><blockquote><p>友情提示，本算法仅支持较新的设备。IOS 9+ Android 4.4+ Chrome 49+ Firefox 31+</p></blockquote><p><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> 测试结果</p><p><img src="https://npm.elemecdn.com/nacdn@1.0.40/blog/files/2022/04/nginx-disable-cbc-ciphers-3.png" alt="禁用前"></p><p><img src="https://npm.elemecdn.com/nacdn@1.0.40/blog/files/2022/04/nginx-disable-cbc-ciphers-4.png" alt="禁用后"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ssl</tag>
+      
+      <tag>nginx</tag>
+      
+      <tag>ciphers</tag>
+      
+      <tag>aes-cbc</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用 acme.sh 申请 Google 的免费 SSL 证书</title>
     <link href="/read/google-gts-free-ssl.html"/>
     <url>/read/google-gts-free-ssl.html</url>
@@ -20,11 +51,11 @@
     
     <tags>
       
+      <tag>ssl</tag>
+      
       <tag>Google</tag>
       
       <tag>GTS</tag>
-      
-      <tag>ssl</tag>
       
       <tag>ACME</tag>
       
@@ -1065,9 +1096,9 @@
     
     <tags>
       
-      <tag>nginx</tag>
-      
       <tag>ssl</tag>
+      
+      <tag>nginx</tag>
       
       <tag>https</tag>
       
@@ -1096,9 +1127,9 @@
     
     <tags>
       
-      <tag>nginx</tag>
-      
       <tag>ssl</tag>
+      
+      <tag>nginx</tag>
       
       <tag>https</tag>
       
