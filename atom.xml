@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>春风吹 - 浅秋枫影的博客</title>
+  <icon>https://cuojue.org/favicon.ico</icon>
+  <subtitle>浅秋枫影的博客</subtitle>
+  <link href="https://cuojue.org/atom.xml" rel="self"/>
+  
+  <link href="https://cuojue.org/"/>
+  <updated>2022-04-05T04:00:00.000Z</updated>
+  <id>https://cuojue.org/</id>
+  
+  <author>
+    <name>WeiCN</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx 禁用 AES CBC 系列弱密码</title>
+    <link href="https://cuojue.org/read/nginx-disable-cbc-ciphers.html"/>
+    <id>https://cuojue.org/read/nginx-disable-cbc-ciphers.html</id>
+    <published>2022-04-05T04:00:00.000Z</published>
+    <updated>2022-04-05T04:00:00.000Z</updated>
+    
+    
+    <summary type="html">前两天试着部署了一下 Google 的证书，然后去 SSL Labs 测试了一下，发现 CBC 模式已经被标注为 WEAK 了，所以禁用一下 CBC 模式。</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="ssl" scheme="https://cuojue.org/tag/ssl/"/>
+    
+    <category term="nginx" scheme="https://cuojue.org/tag/nginx/"/>
+    
+    <category term="ciphers" scheme="https://cuojue.org/tag/ciphers/"/>
+    
+    <category term="aes-cbc" scheme="https://cuojue.org/tag/aes-cbc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 acme.sh 申请 Google 的免费 SSL 证书</title>
+    <link href="https://cuojue.org/read/google-gts-free-ssl.html"/>
+    <id>https://cuojue.org/read/google-gts-free-ssl.html</id>
+    <published>2022-04-02T13:00:00.000Z</published>
+    <updated>2022-04-02T13:00:00.000Z</updated>
+    
+    
+    <summary type="html">Google Trust Services 为 Google 的产品和用户提供传输层安全 (TLS) 证书，帮助对互联网流量进行身份验证和加密。该服务建立在 Google 的云基础架构之上，并得到安全和合规的审计，有助于提供透明、可信和可靠的证书颁发。</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="ssl" scheme="https://cuojue.org/tag/ssl/"/>
+    
+    <category term="Google" scheme="https://cuojue.org/tag/Google/"/>
+    
+    <category term="GTS" scheme="https://cuojue.org/tag/GTS/"/>
+    
+    <category term="ACME" scheme="https://cuojue.org/tag/ACME/"/>
+    
+    <category term="acme.sh" scheme="https://cuojue.org/tag/acme-sh/"/>
+    
+    <category term="free ssl" scheme="https://cuojue.org/tag/free-ssl/"/>
+    
+    <category term="GTS SSL" scheme="https://cuojue.org/tag/GTS-SSL/"/>
+    
+    <category term="Certificates" scheme="https://cuojue.org/tag/Certificates/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用QuicTLS编译支持QUIC/HTTP3的nginx</title>
+    <link href="https://cuojue.org/read/nginx-quic-h3.html"/>
+    <id>https://cuojue.org/read/nginx-quic-h3.html</id>
+    <published>2022-03-27T13:00:00.000Z</published>
+    <updated>2022-03-27T13:00:00.000Z</updated>
+    
+    
+    <summary type="html">nginx的quic分支支持QuicTLS和Boringssl编译，网上大多数都是用Boringssl编译的，记录一下用quictls编译的步骤</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="nginx" scheme="https://cuojue.org/tag/nginx/"/>
+    
+    <category term="QuicTLS" scheme="https://cuojue.org/tag/QuicTLS/"/>
+    
+    <category term="http3" scheme="https://cuojue.org/tag/http3/"/>
+    
+    <category term="quic" scheme="https://cuojue.org/tag/quic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare切换SSL证书颁发者</title>
+    <link href="https://cuojue.org/read/Cloudflare-certificate-authority.html"/>
+    <id>https://cuojue.org/read/Cloudflare-certificate-authority.html</id>
+    <published>2022-03-19T09:00:00.000Z</published>
+    <updated>2022-03-19T09:00:00.000Z</updated>
+    
+    
+    <summary type="html">Cloudflare现在颁发的免费证书有DigiCert和Let&#39;s Encrypt的，本文介绍如何在这两种证书之间切换</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="Cloudflare" scheme="https://cuojue.org/tag/Cloudflare/"/>
+    
+    <category term="SSL Certificate" scheme="https://cuojue.org/tag/SSL-Certificate/"/>
+    
+    <category term="SNI" scheme="https://cuojue.org/tag/SNI/"/>
+    
+    <category term="Let&#39;s Encrypt" scheme="https://cuojue.org/tag/Let-s-Encrypt/"/>
+    
+    <category term="certificate-authority" scheme="https://cuojue.org/tag/certificate-authority/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一键备份脚本backup.sh(新增支持COS/阿里云盘)</title>
+    <link href="https://cuojue.org/read/backup-sh.html"/>
+    <id>https://cuojue.org/read/backup-sh.html</id>
+    <published>2021-03-30T04:00:00.000Z</published>
+    <updated>2022-03-31T14:00:00.000Z</updated>
+    
+    
+    <summary type="html">做网站最重要的是什么？数据！数据，是网站之本，备份，是每一个站长都应该重视的事情。但同时，备份也是一件繁琐和重复的事情。所以，这些事情，肯定能做到自动化的。</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="backup.sh" scheme="https://cuojue.org/tag/backup-sh/"/>
+    
+    <category term="COS" scheme="https://cuojue.org/tag/COS/"/>
+    
+    <category term="AliyunDrive" scheme="https://cuojue.org/tag/AliyunDrive/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Cloudflare Workers搭建免费OneDrive网盘</title>
+    <link href="https://cuojue.org/read/Cloudflare-Workers-OneDrive.html"/>
+    <id>https://cuojue.org/read/Cloudflare-Workers-OneDrive.html</id>
+    <published>2021-03-08T17:00:00.000Z</published>
+    <updated>2022-03-13T11:20:00.000Z</updated>
+    
+    
+    <summary type="html">OneIndex-CF-Index是由 CloudFlare Workers 强力驱动的 OneDrive 索引，本文大部分内容抄自官方文档，但是补充了亲自部署时候遇到的问题和解决方法.</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="Cloudflare" scheme="https://cuojue.org/tag/Cloudflare/"/>
+    
+    <category term="Workers" scheme="https://cuojue.org/tag/Workers/"/>
+    
+    <category term="OneDrive" scheme="https://cuojue.org/tag/OneDrive/"/>
+    
+    <category term="OneIndex-CF-Index" scheme="https://cuojue.org/tag/OneIndex-CF-Index/"/>
+    
+    <category term="OneIndex" scheme="https://cuojue.org/tag/OneIndex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记一次使用PWA(ServiceWorker)后懒加载失效解决</title>
+    <link href="https://cuojue.org/read/fix-hexo-fluid-theme-comments-and-images.html"/>
+    <id>https://cuojue.org/read/fix-hexo-fluid-theme-comments-and-images.html</id>
+    <published>2021-03-07T06:32:33.000Z</published>
+    <updated>2021-03-07T11:10:33.000Z</updated>
+    
+    
+    <summary type="html">浏览的时候发现博客的图片和评论都无法正常加载，也没有报错。打开主题源码分析了一下原因，暂时解决了</summary>
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="Hexo" scheme="https://cuojue.org/tag/Hexo/"/>
+    
+    <category term="hexo-theme" scheme="https://cuojue.org/tag/hexo-theme/"/>
+    
+    <category term="theme" scheme="https://cuojue.org/tag/theme/"/>
+    
+    <category term="Fluid" scheme="https://cuojue.org/tag/Fluid/"/>
+    
+    <category term="PWA" scheme="https://cuojue.org/tag/PWA/"/>
+    
+    <category term="ServiceWorker" scheme="https://cuojue.org/tag/ServiceWorker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>把博客程序从 typecho 换成了 Hexo</title>
+    <link href="https://cuojue.org/read/typecho-to-hexo.html"/>
+    <id>https://cuojue.org/read/typecho-to-hexo.html</id>
+    <published>2021-03-04T18:00:00.000Z</published>
+    <updated>2021-03-08T12:00:00.000Z</updated>
+    
+    
+    <summary type="html">博客原本的程序是 typecho 现在换到了 Hexo . 为什么呢？免费服务香啊！</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="Hexo" scheme="https://cuojue.org/tag/Hexo/"/>
+    
+    <category term="typecho" scheme="https://cuojue.org/tag/typecho/"/>
+    
+    <category term="Twikoo" scheme="https://cuojue.org/tag/Twikoo/"/>
+    
+    <category term="Vercel" scheme="https://cuojue.org/tag/Vercel/"/>
+    
+    <category term="Netlify" scheme="https://cuojue.org/tag/Netlify/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo的外链转内链插件</title>
+    <link href="https://cuojue.org/read/hexo-filter-links.html"/>
+    <id>https://cuojue.org/read/hexo-filter-links.html</id>
+    <published>2021-03-04T17:00:00.000Z</published>
+    <updated>2021-03-06T15:00:00.000Z</updated>
+    
+    
+    <summary type="html">初衷是博客从 typecho 切换到了 Hexo，然后找了一圈都没有这种插件. 最后无奈只能自己写一个了……</summary>
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="Hexo" scheme="https://cuojue.org/tag/Hexo/"/>
+    
+    <category term="hexo-filter-links" scheme="https://cuojue.org/tag/hexo-filter-links/"/>
+    
+    <category term="plugins" scheme="https://cuojue.org/tag/plugins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>零成本搭建一个服务器/网站状态检测页</title>
+    <link href="https://cuojue.org/read/create_server_status_website.html"/>
+    <id>https://cuojue.org/read/create_server_status_website.html</id>
+    <published>2021-03-02T07:52:42.000Z</published>
+    <updated>2021-03-02T07:52:42.000Z</updated>
+    
+    
+    <summary type="html">搭建一个属于自己的服务器状态监测页面，最高可有90天历史，最重要的是完全零成本！</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分享去日志记录版本的LSPosed</title>
+    <link href="https://cuojue.org/read/lsposed.html"/>
+    <id>https://cuojue.org/read/lsposed.html</id>
+    <published>2021-02-15T03:25:00.000Z</published>
+    <updated>2021-03-09T13:25:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我们并不能保证模块作者不滥用日志功能！所以日常使用需要完全禁用日志！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;修改内容&quot;&gt;&lt;a href=&quot;#修改内容&quot; class=&quot;headerlink&quot; title=&quot;修改内容&quot;&gt;&lt;/a&gt;修改内容&lt;/h3&gt;&lt;p&gt;1.修改了管理器图标&lt;br&gt;2.修改了管理器包名(org.lsposed.manager)&lt;br&gt;3.禁用了全部日志&lt;/p&gt;
+&lt;p&gt;其他部分保持与官方的同步&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="闲言碎语" scheme="https://cuojue.org/c/echo/"/>
+    
+    
+    <category term="LSPosed" scheme="https://cuojue.org/tag/LSPosed/"/>
+    
+    <category term="Xposed" scheme="https://cuojue.org/tag/Xposed/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typecho简单增加页面执行时间</title>
+    <link href="https://cuojue.org/read/typecho-add-total.html"/>
+    <id>https://cuojue.org/read/typecho-add-total.html</id>
+    <published>2020-03-06T13:36:00.000Z</published>
+    <updated>2020-03-06T13:36:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;执行时间只能做个参考，并不是特别精确，因为输出了时间之后，还进行了运算。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一篇快速上手Clash的简单教程</title>
+    <link href="https://cuojue.org/read/clash.html"/>
+    <id>https://cuojue.org/read/clash.html</id>
+    <published>2020-03-04T14:25:00.000Z</published>
+    <updated>2020-03-04T14:25:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Dreamacro/clash&quot; title=&quot;Clash&quot;&gt;Clash&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="clash" scheme="https://cuojue.org/tag/clash/"/>
+    
+    <category term="clashr" scheme="https://cuojue.org/tag/clashr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享全平台ClashR Core客户端下载</title>
+    <link href="https://cuojue.org/read/ClashR_Core.html"/>
+    <id>https://cuojue.org/read/ClashR_Core.html</id>
+    <published>2020-03-03T09:03:00.000Z</published>
+    <updated>2020-03-03T09:03:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;官方已支持ssr协议，请使用官方版&lt;br&gt;建议弃用ssr协议&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="clash" scheme="https://cuojue.org/tag/clash/"/>
+    
+    <category term="clashr" scheme="https://cuojue.org/tag/clashr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享一个ClashR for Android客户端</title>
+    <link href="https://cuojue.org/read/ClashR_for_Android.html"/>
+    <id>https://cuojue.org/read/ClashR_for_Android.html</id>
+    <published>2020-03-02T07:43:00.000Z</published>
+    <updated>2021-01-23T07:43:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;搜了一下，发现没有最新版的ClashR Android客户端 自己编译了一个，分享给有需要的朋友吧&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="clash" scheme="https://cuojue.org/tag/clash/"/>
+    
+    <category term="clashr" scheme="https://cuojue.org/tag/clashr/"/>
+    
+    <category term="Android" scheme="https://cuojue.org/tag/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开启全站缓存后关于handsome主题的部分修改</title>
+    <link href="https://cuojue.org/read/typecho-cache-handsome.html"/>
+    <id>https://cuojue.org/read/typecho-cache-handsome.html</id>
+    <published>2020-02-29T07:18:00.000Z</published>
+    <updated>2020-02-29T07:18:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;总体来说，由php实现的实时反馈，cookies等渲染，需要替换成由javascript来本地渲染&lt;/p&gt;
+&lt;h2 id=&quot;左侧边栏&quot;&gt;&lt;a href=&quot;#左侧边栏&quot; class=&quot;headerlink&quot; title=&quot;左侧边栏&quot;&gt;&lt;/a&gt;左侧边栏&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用nginx_fastcgi_cache的时候关于Cookie的处理</title>
+    <link href="https://cuojue.org/read/fastcgi_cache_fix_cookies.html"/>
+    <id>https://cuojue.org/read/fastcgi_cache_fix_cookies.html</id>
+    <published>2020-02-28T05:24:00.000Z</published>
+    <updated>2020-02-28T05:24:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;产生问题&quot;&gt;&lt;a href=&quot;#产生问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="nginx" scheme="https://cuojue.org/tag/nginx/"/>
+    
+    <category term="fastcgi_cache" scheme="https://cuojue.org/tag/fastcgi-cache/"/>
+    
+    <category term="cookies" scheme="https://cuojue.org/tag/cookies/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typecho的页面浏览统计 js 版</title>
+    <link href="https://cuojue.org/read/typecho-PostViews.html"/>
+    <id>https://cuojue.org/read/typecho-PostViews.html</id>
+    <published>2020-02-27T08:52:00.000Z</published>
+    <updated>2020-02-27T08:52:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;如上一篇文章所写，如果启用了fastcgi_cache缓存之后，所有“非js方式的访问统计插件会失效”，所以改造一下统计方法，改为js方式&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="PostViews" scheme="https://cuojue.org/tag/PostViews/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typecho的fastcgi_cache缓存插件</title>
+    <link href="https://cuojue.org/read/typecho-fastcgi_cache.html"/>
+    <id>https://cuojue.org/read/typecho-fastcgi_cache.html</id>
+    <published>2020-02-27T05:48:00.000Z</published>
+    <updated>2020-02-27T05:48:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本插件需要 WEB 服务器为 Nginx 并且需要 ngx_cache_purge 模块支持&lt;/p&gt;
+&lt;h2 id=&quot;插件特性&quot;&gt;&lt;a href=&quot;#插件特性&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="nginx" scheme="https://cuojue.org/tag/nginx/"/>
+    
+    <category term="fastcgi_cache" scheme="https://cuojue.org/tag/fastcgi-cache/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx/OpenLiteSpeed来实现QUIC和HTTP/3支持</title>
+    <link href="https://cuojue.org/read/quic_http3.html"/>
+    <id>https://cuojue.org/read/quic_http3.html</id>
+    <published>2020-02-21T10:34:00.000Z</published>
+    <updated>2020-02-21T10:34:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;网上大部分是采用caddy来监听UDP443端口实现的quic支持，大多数版本太过于老旧。&lt;br&gt;今天采用Docker部署OpenLiteSpeed来实现QUIC和HTTP/3支持。&lt;br&gt;目前支持的版本有：gQUIC(43,46),h3-Q050,h3-24,h3-25&lt;</summary>
+        
+      
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+  </entry>
+  
+</feed>
