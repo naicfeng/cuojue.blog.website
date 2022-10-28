@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cuojue.org/read/Cloudflare-certificate-authority.html</loc>
+    
+    <lastmod>2022-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cuojue.org/about/</loc>
     
     <lastmod>2022-10-28</lastmod>
@@ -50,15 +59,6 @@
     <loc>https://cuojue.org/read/nginx-quic-h3.html</loc>
     
     <lastmod>2022-03-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuojue.org/read/Cloudflare-certificate-authority.html</loc>
-    
-    <lastmod>2022-03-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

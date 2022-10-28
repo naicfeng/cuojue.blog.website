@@ -113,7 +113,7 @@
       <guid>https://cuojue.org/read/Cloudflare-certificate-authority.html</guid>
       <pubDate>Sat, 19 Mar 2022 09:00:00 GMT</pubDate>
       
-      <description>Cloudflare现在颁发的免费证书有DigiCert和Let&#39;s Encrypt的，本文介绍如何在这两种证书之间切换</description>
+      <description>Cloudflare现在颁发的免费证书有DigiCert/Google/Let&#39;s Encrypt的，本文介绍如何在这几种证书之间切换</description>
       
       
       
