@@ -15,8 +15,35 @@
     <atom:link href="https://cuojue.org/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录生活，记录代码，给自己的网络生涯留下一笔精神财富</description>
-    <pubDate>Tue, 05 Apr 2022 04:00:00 GMT</pubDate>
+    <pubDate>Sun, 30 Oct 2022 09:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>在 Fly.io 上部署 alist 网盘程序</title>
+      <link>https://cuojue.org/read/deploy-alist-in-flyio.html</link>
+      <guid>https://cuojue.org/read/deploy-alist-in-flyio.html</guid>
+      <pubDate>Sun, 30 Oct 2022 09:00:00 GMT</pubDate>
+      
+      <description>前两天试着部署了一下 Google 的证书，然后去 SSL Labs 测试了一下，发现 CBC 模式已经被标注为 WEAK 了，所以禁用一下 CBC 模式。</description>
+      
+      
+      
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
+      
+      
+      <category domain="https://cuojue.org/tag/PaaS/">PaaS</category>
+      
+      <category domain="https://cuojue.org/tag/alist/">alist</category>
+      
+      <category domain="https://cuojue.org/tag/Fly-io/">Fly.io</category>
+      
+      <category domain="https://cuojue.org/tag/Docker/">Docker</category>
+      
+      
+      <comments>https://cuojue.org/read/deploy-alist-in-flyio.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Nginx 禁用 AES CBC 系列弱密码</title>
@@ -539,31 +566,6 @@
       
       
       <comments>https://cuojue.org/read/typecho-fastcgi_cache.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Nginx/OpenLiteSpeed来实现QUIC和HTTP/3支持</title>
-      <link>https://cuojue.org/read/quic_http3.html</link>
-      <guid>https://cuojue.org/read/quic_http3.html</guid>
-      <pubDate>Fri, 21 Feb 2020 10:34:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;网上大部分是采用 caddy 来监听 UDP443 端口实现的 quic 支持，大多数版本太过于老旧。&lt;br&gt;今天采用 Docker 部署 OpenLiteSpeed 来实现 QUIC 和 HTTP/3</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
-      
-      
-      
-      <comments>https://cuojue.org/read/quic_http3.html#disqus_thread</comments>
       
     </item>
     

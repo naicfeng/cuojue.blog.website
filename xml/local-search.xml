@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>在 Fly.io 上部署 alist 网盘程序</title>
+    <link href="/read/deploy-alist-in-flyio.html"/>
+    <url>/read/deploy-alist-in-flyio.html</url>
+    
+    <content type="html"><![CDATA[<h3 id="为什么选择-Fly-io"><a href="#为什么选择-Fly-io" class="headerlink" title="为什么选择 Fly.io"></a>为什么选择 Fly.io</h3><p>Fly.io 是一个基于容器的部署平台，致力于在全球各个区域提供贴近最终用户的部署环境。</p><p>跟传统的基于 VM 的云服务相比，基于容器的的部署平台不需要管理底层操作系统，能确保应用在开发和生产环境运行在同一环境，并且可以轻松缩放。</p><p>跟其他容器部署平台相比（例如 Heroku），Fly.io 提供了更多的部署区域（例如中国香港），提供数据持久层（Volume），自带虚拟私有网络（Heroku 企业版内容），更慷慨的免费政策，可以说是在很多层面是一个更好的 Heroku。</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>Fly.io 自身的文档已经提供了 <a href="https://fly.io/docs/languages-and-frameworks/dockerfile/">Docker 应用部署流程</a></p><blockquote><p>本次部署是采用数据持久层来存档 alist 的 sqlite3 数据库，虽然 Fly.io 原生提供了 PostgreSQL 但是那得多用一个 VM 指标，并且免费用户一旦创建了 PostgreSQL 就消耗掉了免费的 1G 空间。</p></blockquote><h4 id="首先安装-flyctl"><a href="#首先安装-flyctl" class="headerlink" title="首先安装 flyctl"></a>首先安装 flyctl</h4><p>Fly.io 的大多数操作需要使用命令行，所以先要安装命令行工具 flyctl。</p><p>安装方式可以参考官方文档：<a href="https://fly.io/docs/getting-started/installing-flyctl">安装 flyctl</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">curl -L https://fly.io/install.sh | sh <span class="hljs-comment">#安装命令</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:/home/username/.fly/bin <span class="hljs-comment">#添加到环境变量，一般安装程序会自动添加</span><br><span class="hljs-built_in">source</span> <span class="hljs-variable">$HOME</span>/.profile <span class="hljs-comment">#刷新环境变量</span><br></code></pre></td></tr></table></figure><h4 id="注册-fly-io"><a href="#注册-fly-io" class="headerlink" title="注册 fly.io"></a>注册 fly.io</h4><p>在 Fly.io 创建应用之前先要注册，如果之前没有注册可以通过命令行执行：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">flyctl auth signup</span><br></code></pre></td></tr></table></figure><p>它会打开浏览器进入注册流程，注册完毕后会自己跳回到命令行通过验证。</p><p><del>要注意的是为了避免免费资源被滥用，fly.io 要求注册之后填写信用卡完成验证。当然，这样也便于转化付费用户。</del><br>今天(2022-10-30)我注册并没有要求验证信用卡，不知道是不是已经取消了这个要求。</p><p>如果之前已经注册过了，可以直接登录：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">flyctl auth login</span><br></code></pre></td></tr></table></figure><p>注册完成后，我们就可以正式开始部署应用。</p><h3 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h3><h4 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">git <span class="hljs-built_in">clone</span> https://github.com/alist-org/alist-render<br><span class="hljs-built_in">cd</span> alist-render<br>flyctl launch<br></code></pre></td></tr></table></figure><p>执行创建用户命令后，会问几个问题，名称啊，区域啊</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sh">Creating app <span class="hljs-keyword">in</span> /path/to/project<br>Scanning <span class="hljs-built_in">source</span> code<br>Detected a Dockerfile app<br>? App Name (leave blank to use an auto-generated name):<br>? Select organization: Name (personal)<br>? Select region: hkg (Hong Kong)<br>Created app app-slug <span class="hljs-keyword">in</span> organization personal<br>Wrote config file fly.toml<br>? Would you like to deploy now? No<br></code></pre></td></tr></table></figure><p>其中 <code>App Name</code> 需要是全局唯一的，而且之后不能更改，同时会作为 <code>app</code> 的子域名。如果只是尝试一下，也可以直接回车自动生成。其他选项按照需要选择即可。最后一步问是否现在部署，选择 <code>No</code>，因为在启动前还需要修改配置，设置环境变量，挂载目录等。</p><p>修改配置文件，端口为<code>5244</code></p><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs toml"><span class="hljs-section">[[services]]</span><br>  <span class="hljs-attr">http_checks</span> = []<br>  <span class="hljs-attr">internal_port</span> = <span class="hljs-number">5244</span><br></code></pre></td></tr></table></figure><p>创建一个 <code>1G</code> 的持久存储空间(最小单位 1)</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">flyctl volumes create data --size 1 --app APP_NAME<br></code></pre></td></tr></table></figure><p>然后在 fly.toml 内添加以下内容：</p><figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs toml"><span class="hljs-section">[mounts]</span><br>  <span class="hljs-attr">destination</span> = <span class="hljs-string">&quot;/opt/alist/data&quot;</span><br>  <span class="hljs-attr">source</span> = <span class="hljs-string">&quot;data&quot;</span><br></code></pre></td></tr></table></figure><h4 id="部署应用"><a href="#部署应用" class="headerlink" title="部署应用"></a>部署应用</h4><p>准备工作已经完成，现在可以部署 alist 应用，输入以下命令</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">flyctl deploy --remote-only<br></code></pre></td></tr></table></figure><p>如果部署顺利，之后就可以用以下命令打开应用：</p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">flyctl open<br></code></pre></td></tr></table></figure><p>你也可以直接在浏览器打开 <code>https://APP_NAME.fly.dev</code></p><p>如果部署不顺利，一般都是网络问题，需要科学上网<br>或者<a href="https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/">使用 Github Action 来部署</a></p><h4 id="查看密码"><a href="#查看密码" class="headerlink" title="查看密码"></a>查看密码</h4><p>部署的时候，日志会显示密码，如果没有保存，可以在后台日志里面看<br><a href="https://fly.io/apps/APP_NAME/monitoring">https://fly.io/apps/APP_NAME/monitoring</a></p><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade">flyctl ssh <span class="hljs-built_in">console</span> -a APP_NAME<br></code></pre></td></tr></table></figure><h3 id="查看成品"><a href="#查看成品" class="headerlink" title="查看成品"></a>查看成品</h3><p>本站例 <a href="https://disk.fly.dev/">https://disk.fly.dev</a></p><hr><p>参考：<a href="https://geeknote.net/Rei/posts/387">https://geeknote.net/Rei/posts/387</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PaaS</tag>
+      
+      <tag>alist</tag>
+      
+      <tag>Fly.io</tag>
+      
+      <tag>Docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Nginx 禁用 AES CBC 系列弱密码</title>
     <link href="/read/nginx-disable-cbc-ciphers.html"/>
     <url>/read/nginx-disable-cbc-ciphers.html</url>
@@ -1220,9 +1251,9 @@
     
     <tags>
       
-      <tag>Synology</tag>
-      
       <tag>Docker</tag>
+      
+      <tag>Synology</tag>
       
       <tag>迅雷快鸟</tag>
       

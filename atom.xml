@@ -6,7 +6,7 @@
   <link href="https://cuojue.org/atom.xml" rel="self"/>
   
   <link href="https://cuojue.org/"/>
-  <updated>2022-04-05T04:00:00.000Z</updated>
+  <updated>2022-10-30T09:00:00.000Z</updated>
   <id>https://cuojue.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 Fly.io 上部署 alist 网盘程序</title>
+    <link href="https://cuojue.org/read/deploy-alist-in-flyio.html"/>
+    <id>https://cuojue.org/read/deploy-alist-in-flyio.html</id>
+    <published>2022-10-30T09:00:00.000Z</published>
+    <updated>2022-10-30T09:00:00.000Z</updated>
+    
+    
+    <summary type="html">前两天试着部署了一下 Google 的证书，然后去 SSL Labs 测试了一下，发现 CBC 模式已经被标注为 WEAK 了，所以禁用一下 CBC 模式。</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="PaaS" scheme="https://cuojue.org/tag/PaaS/"/>
+    
+    <category term="alist" scheme="https://cuojue.org/tag/alist/"/>
+    
+    <category term="Fly.io" scheme="https://cuojue.org/tag/Fly-io/"/>
+    
+    <category term="Docker" scheme="https://cuojue.org/tag/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx 禁用 AES CBC 系列弱密码</title>
@@ -499,29 +524,6 @@
     <category term="nginx" scheme="https://cuojue.org/tag/nginx/"/>
     
     <category term="fastcgi_cache" scheme="https://cuojue.org/tag/fastcgi-cache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx/OpenLiteSpeed来实现QUIC和HTTP/3支持</title>
-    <link href="https://cuojue.org/read/quic_http3.html"/>
-    <id>https://cuojue.org/read/quic_http3.html</id>
-    <published>2020-02-21T10:34:00.000Z</published>
-    <updated>2020-02-21T10:34:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;网上大部分是采用 caddy 来监听 UDP443 端口实现的 quic 支持，大多数版本太过于老旧。&lt;br&gt;今天采用 Docker 部署 OpenLiteSpeed 来实现 QUIC 和 HTTP/3</summary>
-        
-      
-    
-    
-    
-    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
-    
     
   </entry>
   
