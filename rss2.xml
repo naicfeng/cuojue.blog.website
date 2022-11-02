@@ -15,8 +15,37 @@
     <atom:link href="https://cuojue.org/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录生活，记录代码，给自己的网络生涯留下一笔精神财富</description>
-    <pubDate>Wed, 02 Nov 2022 05:00:00 GMT</pubDate>
+    <pubDate>Wed, 02 Nov 2022 11:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Vercel 部署完成后执行 Github Action</title>
+      <link>https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html</link>
+      <guid>https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html</guid>
+      <pubDate>Wed, 02 Nov 2022 11:00:00 GMT</pubDate>
+      
+      <description>Vercel 提供了 WebHook, 但是需要使用 Integrations 才能访问，本文采用另一种方法，让 Vercel 的 GitHub Bot 去运行 Github Action 达到目的。</description>
+      
+      
+      
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
+      
+      
+      <category domain="https://cuojue.org/tag/Vercel/">Vercel</category>
+      
+      <category domain="https://cuojue.org/tag/WebHook/">WebHook</category>
+      
+      <category domain="https://cuojue.org/tag/Github/">Github</category>
+      
+      <category domain="https://cuojue.org/tag/Github-Action/">Github Action</category>
+      
+      <category domain="https://cuojue.org/tag/deployment-status/">deployment_status</category>
+      
+      
+      <comments>https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>使用 Vercel 加速 Gravatar 和 G Analytics</title>
@@ -29,16 +58,16 @@
       
       
       
-      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
-      
       <category domain="https://cuojue.org/c/code/">代码分享</category>
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
       
       <category domain="https://cuojue.org/tag/Vercel/">Vercel</category>
       
-      <category domain="https://cuojue.org/tag/Gravatar/">Gravatar</category>
-      
       <category domain="https://cuojue.org/tag/Google/">Google</category>
+      
+      <category domain="https://cuojue.org/tag/Gravatar/">Gravatar</category>
       
       <category domain="https://cuojue.org/tag/Analytics/">Analytics</category>
       
@@ -63,13 +92,13 @@
       <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
       
+      <category domain="https://cuojue.org/tag/Docker/">Docker</category>
+      
       <category domain="https://cuojue.org/tag/PaaS/">PaaS</category>
       
       <category domain="https://cuojue.org/tag/alist/">alist</category>
       
       <category domain="https://cuojue.org/tag/Fly-io/">Fly.io</category>
-      
-      <category domain="https://cuojue.org/tag/Docker/">Docker</category>
       
       
       <comments>https://cuojue.org/read/deploy-alist-in-flyio.html#disqus_thread</comments>
@@ -90,9 +119,9 @@
       <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
       
-      <category domain="https://cuojue.org/tag/ssl/">ssl</category>
-      
       <category domain="https://cuojue.org/tag/nginx/">nginx</category>
+      
+      <category domain="https://cuojue.org/tag/ssl/">ssl</category>
       
       <category domain="https://cuojue.org/tag/ciphers/">ciphers</category>
       
@@ -205,9 +234,9 @@
       
       
       
-      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
-      
       <category domain="https://cuojue.org/c/code/">代码分享</category>
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
       
       <category domain="https://cuojue.org/tag/backup-sh/">backup.sh</category>
@@ -235,11 +264,11 @@
       <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
       
+      <category domain="https://cuojue.org/tag/OneDrive/">OneDrive</category>
+      
       <category domain="https://cuojue.org/tag/Cloudflare/">Cloudflare</category>
       
       <category domain="https://cuojue.org/tag/Workers/">Workers</category>
-      
-      <category domain="https://cuojue.org/tag/OneDrive/">OneDrive</category>
       
       <category domain="https://cuojue.org/tag/OneIndex-CF-Index/">OneIndex-CF-Index</category>
       
@@ -295,13 +324,13 @@
       <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
       
-      <category domain="https://cuojue.org/tag/Vercel/">Vercel</category>
+      <category domain="https://cuojue.org/tag/typecho/">typecho</category>
       
       <category domain="https://cuojue.org/tag/Hexo/">Hexo</category>
       
-      <category domain="https://cuojue.org/tag/typecho/">typecho</category>
-      
       <category domain="https://cuojue.org/tag/Twikoo/">Twikoo</category>
+      
+      <category domain="https://cuojue.org/tag/Vercel/">Vercel</category>
       
       <category domain="https://cuojue.org/tag/Netlify/">Netlify</category>
       
@@ -546,27 +575,6 @@
       
       
       <comments>https://cuojue.org/read/fastcgi_cache_fix_cookies.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Typecho的页面浏览统计 js 版</title>
-      <link>https://cuojue.org/read/typecho-PostViews.html</link>
-      <guid>https://cuojue.org/read/typecho-PostViews.html</guid>
-      <pubDate>Thu, 27 Feb 2020 08:52:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;如上一篇文章所写，如果启用了 fastcgi_cache 缓存之后，所有“非 js 方式的访问统计插件会失效”，所以改造一下统计方法，改为 js 方式&lt;/p&gt;</description>
-      
-      
-      
-      
-      <category domain="https://cuojue.org/c/code/">代码分享</category>
-      
-      
-      <category domain="https://cuojue.org/tag/PostViews/">PostViews</category>
-      
-      
-      <comments>https://cuojue.org/read/typecho-PostViews.html#disqus_thread</comments>
       
     </item>
     

@@ -1,3 +1,4 @@
+https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html
 https://cuojue.org/read/deploy-gravatar-ga-in-vercel.html
 https://cuojue.org/read/deploy-alist-in-flyio.html
 https://cuojue.org/read/Cloudflare-certificate-authority.html
@@ -7,4 +8,3 @@ https://cuojue.org/read/google-gts-free-ssl.html
 https://cuojue.org/read/backup-sh.html
 https://cuojue.org/read/nginx-quic-h3.html
 https://cuojue.org/read/Cloudflare-Workers-OneDrive.html
-https://cuojue.org/read/typecho-to-hexo.html
