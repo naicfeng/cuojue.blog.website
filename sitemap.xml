@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://cuojue.org/read/deploy-gravatar-ga-in-vercel.html</loc>
+    
+    <lastmod>2022-11-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cuojue.org/read/deploy-alist-in-flyio.html</loc>
     
     <lastmod>2022-10-30</lastmod>
@@ -479,6 +488,13 @@
 
   
   <url>
+    <loc>https://cuojue.org/tag/Vercel/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cuojue.org/tag/Cloudflare/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -675,6 +691,34 @@
   </url>
   
   <url>
+    <loc>https://cuojue.org/tag/Gravatar/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuojue.org/tag/Google/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuojue.org/tag/Analytics/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuojue.org/tag/Edge-Functions/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cuojue.org/tag/QuicTLS/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -690,13 +734,6 @@
   
   <url>
     <loc>https://cuojue.org/tag/quic/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuojue.org/tag/Google/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -858,13 +895,6 @@
   
   <url>
     <loc>https://cuojue.org/tag/Twikoo/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cuojue.org/tag/Vercel/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

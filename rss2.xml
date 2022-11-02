@@ -15,8 +15,39 @@
     <atom:link href="https://cuojue.org/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录生活，记录代码，给自己的网络生涯留下一笔精神财富</description>
-    <pubDate>Sun, 30 Oct 2022 09:00:00 GMT</pubDate>
+    <pubDate>Wed, 02 Nov 2022 05:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>使用 Vercel 加速 Gravatar 和 G Analytics</title>
+      <link>https://cuojue.org/read/deploy-gravatar-ga-in-vercel.html</link>
+      <guid>https://cuojue.org/read/deploy-gravatar-ga-in-vercel.html</guid>
+      <pubDate>Wed, 02 Nov 2022 05:00:00 GMT</pubDate>
+      
+      <description>Vercel Edge Functions 允许您以速度和个性化的方式向您网站的访问者提供内容。它们默认部署在 Vercel 的边缘网络上，在距离用户最近的边缘节点运行服务器端逻辑。</description>
+      
+      
+      
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
+      
+      <category domain="https://cuojue.org/c/code/">代码分享</category>
+      
+      
+      <category domain="https://cuojue.org/tag/Vercel/">Vercel</category>
+      
+      <category domain="https://cuojue.org/tag/Gravatar/">Gravatar</category>
+      
+      <category domain="https://cuojue.org/tag/Google/">Google</category>
+      
+      <category domain="https://cuojue.org/tag/Analytics/">Analytics</category>
+      
+      <category domain="https://cuojue.org/tag/Edge-Functions/">Edge Functions</category>
+      
+      
+      <comments>https://cuojue.org/read/deploy-gravatar-ga-in-vercel.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>在 Fly.io 上部署 alist 网盘程序</title>
@@ -264,13 +295,13 @@
       <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
       
+      <category domain="https://cuojue.org/tag/Vercel/">Vercel</category>
+      
       <category domain="https://cuojue.org/tag/Hexo/">Hexo</category>
       
       <category domain="https://cuojue.org/tag/typecho/">typecho</category>
       
       <category domain="https://cuojue.org/tag/Twikoo/">Twikoo</category>
-      
-      <category domain="https://cuojue.org/tag/Vercel/">Vercel</category>
       
       <category domain="https://cuojue.org/tag/Netlify/">Netlify</category>
       
@@ -536,36 +567,6 @@
       
       
       <comments>https://cuojue.org/read/typecho-PostViews.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Typecho的fastcgi_cache缓存插件</title>
-      <link>https://cuojue.org/read/typecho-fastcgi_cache.html</link>
-      <guid>https://cuojue.org/read/typecho-fastcgi_cache.html</guid>
-      <pubDate>Thu, 27 Feb 2020 05:48:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;本插件需要 WEB 服务器为 Nginx 并且需要 ngx_cache_purge 模块支持&lt;/p&gt;
-&lt;h2 id=&quot;插件特性&quot;&gt;&lt;a href=&quot;#插件特性&quot; class=&quot;headerlink&quot; title=&quot;插件特性&quot;&gt;&lt;/a&gt;插件特性&lt;/h2&gt;&lt;p&gt;直接在</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cuojue.org/c/code/">代码分享</category>
-      
-      
-      <category domain="https://cuojue.org/tag/nginx/">nginx</category>
-      
-      <category domain="https://cuojue.org/tag/fastcgi-cache/">fastcgi_cache</category>
-      
-      
-      <comments>https://cuojue.org/read/typecho-fastcgi_cache.html#disqus_thread</comments>
       
     </item>
     

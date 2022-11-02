@@ -6,7 +6,7 @@
   <link href="https://cuojue.org/atom.xml" rel="self"/>
   
   <link href="https://cuojue.org/"/>
-  <updated>2022-10-30T09:00:00.000Z</updated>
+  <updated>2022-11-02T05:00:00.000Z</updated>
   <id>https://cuojue.org/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Vercel 加速 Gravatar 和 G Analytics</title>
+    <link href="https://cuojue.org/read/deploy-gravatar-ga-in-vercel.html"/>
+    <id>https://cuojue.org/read/deploy-gravatar-ga-in-vercel.html</id>
+    <published>2022-11-02T05:00:00.000Z</published>
+    <updated>2022-11-02T05:00:00.000Z</updated>
+    
+    
+    <summary type="html">Vercel Edge Functions 允许您以速度和个性化的方式向您网站的访问者提供内容。它们默认部署在 Vercel 的边缘网络上，在距离用户最近的边缘节点运行服务器端逻辑。</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
+    
+    
+    <category term="Vercel" scheme="https://cuojue.org/tag/Vercel/"/>
+    
+    <category term="Gravatar" scheme="https://cuojue.org/tag/Gravatar/"/>
+    
+    <category term="Google" scheme="https://cuojue.org/tag/Google/"/>
+    
+    <category term="Analytics" scheme="https://cuojue.org/tag/Analytics/"/>
+    
+    <category term="Edge Functions" scheme="https://cuojue.org/tag/Edge-Functions/"/>
+    
+  </entry>
   
   <entry>
     <title>在 Fly.io 上部署 alist 网盘程序</title>
@@ -247,13 +276,13 @@
     <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
     
     
+    <category term="Vercel" scheme="https://cuojue.org/tag/Vercel/"/>
+    
     <category term="Hexo" scheme="https://cuojue.org/tag/Hexo/"/>
     
     <category term="typecho" scheme="https://cuojue.org/tag/typecho/"/>
     
     <category term="Twikoo" scheme="https://cuojue.org/tag/Twikoo/"/>
-    
-    <category term="Vercel" scheme="https://cuojue.org/tag/Vercel/"/>
     
     <category term="Netlify" scheme="https://cuojue.org/tag/Netlify/"/>
     
@@ -496,34 +525,6 @@
     
     
     <category term="PostViews" scheme="https://cuojue.org/tag/PostViews/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typecho的fastcgi_cache缓存插件</title>
-    <link href="https://cuojue.org/read/typecho-fastcgi_cache.html"/>
-    <id>https://cuojue.org/read/typecho-fastcgi_cache.html</id>
-    <published>2020-02-27T05:48:00.000Z</published>
-    <updated>2020-02-27T05:48:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本插件需要 WEB 服务器为 Nginx 并且需要 ngx_cache_purge 模块支持&lt;/p&gt;
-&lt;h2 id=&quot;插件特性&quot;&gt;&lt;a href=&quot;#插件特性&quot; class=&quot;headerlink&quot; title=&quot;插件特性&quot;&gt;&lt;/a&gt;插件特性&lt;/h2&gt;&lt;p&gt;直接在</summary>
-        
-      
-    
-    
-    
-    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
-    
-    
-    <category term="nginx" scheme="https://cuojue.org/tag/nginx/"/>
-    
-    <category term="fastcgi_cache" scheme="https://cuojue.org/tag/fastcgi-cache/"/>
     
   </entry>
   
