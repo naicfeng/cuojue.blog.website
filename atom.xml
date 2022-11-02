@@ -311,9 +311,9 @@
 &lt;p&gt;我们并不能保证模块作者不滥用日志功能！所以日常使用需要完全禁用日志！&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;修改内容&quot;&gt;&lt;a href=&quot;#修改内容&quot; class=&quot;headerlink&quot; title=&quot;修改内容&quot;&gt;&lt;/a&gt;修改内容&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt; 修改了管理器图标&lt;/li&gt;
-&lt;li&gt; 修改了管理器包名(org.lsposed.manager)&lt;/li&gt;
-&lt;li&gt; 禁用了全部日志&lt;/li&gt;
+&lt;li&gt;修改了管理器图标&lt;/li&gt;
+&lt;li&gt;修改了管理器包名(org.lsposed.manager)&lt;/li&gt;
+&lt;li&gt;禁用了全部日志&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;其他部分保持与官方的同步&lt;/p&gt;</summary>
     
