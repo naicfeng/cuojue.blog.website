@@ -366,33 +366,7 @@
     <summary type="html">&lt;p&gt;LSPosed 是一个利用 LSPlant Hook 提供与原版 Xposed 一致 API 的 Riru &amp;#x2F; Zygisk 模块&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Xposed 框架是一款可以在不修改 APK 的情况下影响程序运行（修改系统）的框架服务，基于它可以制作出许多功能强大的模块，且在功能不冲突的情况下同时运作。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;为什么要禁用日志&quot;&gt;&lt;a href=&quot;#为什么要禁用日志&quot; class=&quot;headerlink&quot; title=&quot;为什么要禁用日志&quot;&gt;&lt;/a&gt;为什么要禁用日志&lt;/h3&gt;&lt;p&gt;日志功能是为了开发者定位代码问题的手段，一般在 Debug 版本包含详细日志&lt;br&gt;模块质量参差不齐的今天，某些开发者滥用日志功能，日常使用记录不必要的日志会导致不必要的性能开销&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们并不能保证模块作者不滥用日志功能！所以日常使用需要完全禁用日志！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;支持的-Android-版本&quot;&gt;&lt;a href=&quot;#支持的-Android-版本&quot; class=&quot;headerlink&quot; title=&quot;支持的 Android 版本&quot;&gt;&lt;/a&gt;支持的 Android 版本&lt;/h3&gt;&lt;p&gt;Android 8.1 ~ 13&lt;/p&gt;
-&lt;h3 id=&quot;安装方式&quot;&gt;&lt;a href=&quot;#安装方式&quot; class=&quot;headerlink&quot; title=&quot;安装方式&quot;&gt;&lt;/a&gt;安装方式&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;首先安装 Magisk v23+ (Riru) &amp;#x2F; v24+ (Zygisk)&lt;/li&gt;
-&lt;li&gt;如果使用 Riru 模式，还需要先安装 &lt;a href=&quot;https://github.com/RikkaApps/Riru/releases&quot;&gt;Riru&lt;/a&gt; v25 或以上版本&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80&quot;&gt;下载&lt;/a&gt; 并且在 Magisk 程序内安装 LSPosed&lt;/li&gt;
-&lt;li&gt;重启设备&lt;/li&gt;
-&lt;li&gt;按照提示将 LSPosed 图标添加到桌面&lt;ul&gt;
-&lt;li&gt;某些系统不会提示，直接就会显示在桌面&lt;/li&gt;
-&lt;li&gt;如果没有提示也没有图标，可以在 &lt;code&gt;/data/adb/lspd/manager.apk&lt;/code&gt; 手动找到管理器安装包安装&lt;/li&gt;
-&lt;li&gt;如果你不小心删掉了图标，可以重启恢复或者手动安装管理器&lt;/li&gt;
-&lt;li&gt;如果你不需要它显示图标，可以手动安装管理器后，在设置界面关掉这个选项&lt;/li&gt;
-&lt;li&gt;如果你的设备可以拨号，也可以在拨号盘输入 &lt;code&gt;*#*#5776733#*#*&lt;/code&gt; (LSPosed 字母的九键)来启动管理器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;开始愉快的搞机&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;修改内容&quot;&gt;&lt;a href=&quot;#修改内容&quot; class=&quot;headerlink&quot; title=&quot;修改内容&quot;&gt;&lt;/a&gt;修改内容&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;修改了管理器图标&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;修改了管理器包名(org.lsposed.manager)&lt;/del&gt; 官方已经改为同名&lt;/li&gt;
-&lt;li&gt;禁用了全部日志&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;除禁用日志，其他部分保持与官方的同步&lt;/p&gt;</summary>
+&lt;/blockquote&gt;</summary>
     
     
     
