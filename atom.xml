@@ -17,7 +17,7 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vercel 部署完成后执行 Github Action</title>
+    <title>Vercel 部署完成后自动执行 Github Action</title>
     <link href="https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html"/>
     <id>https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html</id>
     <published>2022-11-02T11:00:00.000Z</published>
@@ -27,6 +27,8 @@
     <summary type="html">Vercel 提供了 WebHook, 但是需要使用 Integrations 才能访问，本文采用另一种方法，让 Vercel 的 GitHub Bot 去运行 Github Action 达到目的。</summary>
     
     
+    
+    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
     
     <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
     

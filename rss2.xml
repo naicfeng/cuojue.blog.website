@@ -19,7 +19,7 @@
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Vercel 部署完成后执行 Github Action</title>
+      <title>Vercel 部署完成后自动执行 Github Action</title>
       <link>https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html</link>
       <guid>https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html</guid>
       <pubDate>Wed, 02 Nov 2022 11:00:00 GMT</pubDate>
@@ -28,6 +28,8 @@
       
       
       
+      
+      <category domain="https://cuojue.org/c/code/">代码分享</category>
       
       <category domain="https://cuojue.org/c/notes/">个人笔记</category>
       
