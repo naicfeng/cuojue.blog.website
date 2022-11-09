@@ -15,8 +15,35 @@
     <atom:link href="https://cuojue.org/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录生活，记录代码，给自己的网络生涯留下一笔精神财富</description>
-    <pubDate>Wed, 02 Nov 2022 11:00:00 GMT</pubDate>
+    <pubDate>Wed, 09 Nov 2022 05:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Snap Docker 配置 IPV6 和修复遗留错误</title>
+      <link>https://cuojue.org/read/snap-docker-daemon-config.html</link>
+      <guid>https://cuojue.org/read/snap-docker-daemon-config.html</guid>
+      <pubDate>Wed, 09 Nov 2022 05:00:00 GMT</pubDate>
+      
+      <description>使用 Ubuntu 的 apt 安装的 Docker 默认用的 snap 镜像，配置文件位置和其他方式安装的不同，导致识别不到配置文件</description>
+      
+      
+      
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
+      
+      
+      <category domain="https://cuojue.org/tag/Docker/">Docker</category>
+      
+      <category domain="https://cuojue.org/tag/Snap/">Snap</category>
+      
+      <category domain="https://cuojue.org/tag/IPV6/">IPV6</category>
+      
+      <category domain="https://cuojue.org/tag/python/">python</category>
+      
+      
+      <comments>https://cuojue.org/read/snap-docker-daemon-config.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Vercel 部署完成后自动执行 Github Action</title>
@@ -541,37 +568,6 @@
       
       
       <comments>https://cuojue.org/read/typecho-cache-handsome.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>使用nginx_fastcgi_cache的时候关于Cookie的处理</title>
-      <link>https://cuojue.org/read/fastcgi_cache_fix_cookies.html</link>
-      <guid>https://cuojue.org/read/fastcgi_cache_fix_cookies.html</guid>
-      <pubDate>Fri, 28 Feb 2020 05:24:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h2 id=&quot;产生问题&quot;&gt;&lt;a href=&quot;#产生问题&quot; class=&quot;headerlink&quot; title=&quot;产生问题&quot;&gt;&lt;/a&gt;产生问题&lt;/h2&gt;&lt;p&gt;本站使用了 fastcgi_cache 来缓存所有页面，导致了一个问题，那就是 set-cookie</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cuojue.org/c/code/">代码分享</category>
-      
-      
-      <category domain="https://cuojue.org/tag/nginx/">nginx</category>
-      
-      <category domain="https://cuojue.org/tag/fastcgi-cache/">fastcgi_cache</category>
-      
-      <category domain="https://cuojue.org/tag/cookies/">cookies</category>
-      
-      
-      <comments>https://cuojue.org/read/fastcgi_cache_fix_cookies.html#disqus_thread</comments>
       
     </item>
     

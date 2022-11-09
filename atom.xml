@@ -6,7 +6,7 @@
   <link href="https://cuojue.org/atom.xml" rel="self"/>
   
   <link href="https://cuojue.org/"/>
-  <updated>2022-11-02T11:00:00.000Z</updated>
+  <updated>2022-11-09T05:00:00.000Z</updated>
   <id>https://cuojue.org/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Snap Docker 配置 IPV6 和修复遗留错误</title>
+    <link href="https://cuojue.org/read/snap-docker-daemon-config.html"/>
+    <id>https://cuojue.org/read/snap-docker-daemon-config.html</id>
+    <published>2022-11-09T05:00:00.000Z</published>
+    <updated>2022-11-09T05:00:00.000Z</updated>
+    
+    
+    <summary type="html">使用 Ubuntu 的 apt 安装的 Docker 默认用的 snap 镜像，配置文件位置和其他方式安装的不同，导致识别不到配置文件</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="Docker" scheme="https://cuojue.org/tag/Docker/"/>
+    
+    <category term="Snap" scheme="https://cuojue.org/tag/Snap/"/>
+    
+    <category term="IPV6" scheme="https://cuojue.org/tag/IPV6/"/>
+    
+    <category term="python" scheme="https://cuojue.org/tag/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Vercel 部署完成后自动执行 Github Action</title>
@@ -501,35 +526,6 @@
     
     <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>使用nginx_fastcgi_cache的时候关于Cookie的处理</title>
-    <link href="https://cuojue.org/read/fastcgi_cache_fix_cookies.html"/>
-    <id>https://cuojue.org/read/fastcgi_cache_fix_cookies.html</id>
-    <published>2020-02-28T05:24:00.000Z</published>
-    <updated>2020-02-28T05:24:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;产生问题&quot;&gt;&lt;a href=&quot;#产生问题&quot; class=&quot;headerlink&quot; title=&quot;产生问题&quot;&gt;&lt;/a&gt;产生问题&lt;/h2&gt;&lt;p&gt;本站使用了 fastcgi_cache 来缓存所有页面，导致了一个问题，那就是 set-cookie</summary>
-        
-      
-    
-    
-    
-    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
-    
-    
-    <category term="nginx" scheme="https://cuojue.org/tag/nginx/"/>
-    
-    <category term="fastcgi_cache" scheme="https://cuojue.org/tag/fastcgi-cache/"/>
-    
-    <category term="cookies" scheme="https://cuojue.org/tag/cookies/"/>
     
   </entry>
   

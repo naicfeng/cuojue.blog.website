@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Snap Docker 配置 IPV6 和修复遗留错误</title>
+    <link href="/read/snap-docker-daemon-config.html"/>
+    <url>/read/snap-docker-daemon-config.html</url>
+    
+    <content type="html"><![CDATA[<p>原因是服务器上有个 Docker 服务需要用 IPV6 访问某 API<br>该 API 是双栈的，但是 IPV4 不通，不得已只能用 V6 来访问</p><p>使用 Ubuntu 的 apt 安装的 Docker 默认用的 snap 镜像，配置文件位置和其他方式安装的不同，导致识别不到配置文件</p><p>一开始我发现并不存在<code>/etc/docker/daemon.json</code>文件<br>便创建了一个新的</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">cat</span> &gt;/etc/docker/daemon.json &lt;&lt;<span class="hljs-string">EOF</span><br><span class="hljs-string">&#123;</span><br><span class="hljs-string">    &quot;ipv6&quot;: true,</span><br><span class="hljs-string">    &quot;fixed-cidr-v6&quot;: &quot;fd00::/80&quot;,</span><br><span class="hljs-string">    &quot;experimental&quot;: true,</span><br><span class="hljs-string">    &quot;ip6tables&quot;: true</span><br><span class="hljs-string">&#125;</span><br><span class="hljs-string">EOF</span><br></code></pre></td></tr></table></figure><p>然后使用</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">sudo systemctl restart docker<br></code></pre></td></tr></table></figure><p>准备重启，发现没有找到 docker 服务？？？</p><p>运行一下<code>list</code>发现 snap 的 docker 用的是<code>snap.docker.dockerd</code>作为服务名</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">sudo systemctl restart snap.docker.dockerd<br></code></pre></td></tr></table></figure><p>重启 Docker 后，没有任何变化，还是没有分配 IPV6 的地址，也还是没办法访问 IPV6 网络</p><p>Google 了半天发现全都是相同的内容，直到发现了<a href="https://github.com/docker-archive/docker-snap/issues/22">How to config the daemon settings?</a></p><p>原来 snap 的 docker 配置文件路径不同，不过这篇文章写的路径也不对</p><p>不是</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">/var/snap/docker/current/etc/docker/daemon.json<br></code></pre></td></tr></table></figure><p>实际应该是</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">/var/snap/docker/current/config/daemon.json<br></code></pre></td></tr></table></figure><p>修改了<code>daemon.json</code>后，可以正确获取到 IPV6 也可以正常从内到外访问 IPV6 的资源了</p><hr><p>然后是最近运行 <code>docker-compose</code> 提示一直错误，版本过低</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh">/snap/docker/2281/lib/python3.6/site-packages/paramiko/transport.py:33:<br>CryptographyDeprecationWarning:<br>Python 3.6 is no longer supported by the Python core team.<br>Therefore, support <span class="hljs-keyword">for</span> it is deprecated <span class="hljs-keyword">in</span> cryptography and will be removed <span class="hljs-keyword">in</span> a future release.<br>  from cryptography.hazmat.backends import default_backend<br></code></pre></td></tr></table></figure><p>原来是 <code>docker-compose</code> 已经过时了，新版的命令是 <code>docker compose</code> (去掉了横线)<br>要是用习惯了可以给它创建一个别名</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">alias</span> docker-compose=<span class="hljs-string">&#x27;docker compose&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Docker</tag>
+      
+      <tag>Snap</tag>
+      
+      <tag>IPV6</tag>
+      
+      <tag>python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vercel 部署完成后自动执行 Github Action</title>
     <link href="/read/run-sh-after-vercel-deploy-complete.html"/>
     <url>/read/run-sh-after-vercel-deploy-complete.html</url>
