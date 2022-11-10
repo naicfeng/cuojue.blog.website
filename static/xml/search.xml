@@ -4,6 +4,41 @@
   
   
   <entry>
+    <title>兜兜转转还是回到 CloudFlare 的怀抱</title>
+    <link href="/read/always-back-to-cloudflare.html"/>
+    <url>/read/always-back-to-cloudflare.html</url>
+    
+    <content type="html"><![CDATA[<p>由于我国复杂的互联网环境，本博客无法部署在国内，但是国内也需要稳定的访问它。</p><p>鉴于此博主测试了</p><blockquote><p>Vercel 直连<br>Netlify 直连<br>Fly.io 直连<br>Oracle 首尔直连</p></blockquote><p>之后，还是回到了 CloudFlare + Vercel 的服务</p><span id="more"></span><p><del>绝不提静态资源白嫖大厂 CDN</del></p><p>当然都是建立在所有服务必须 Free 的前提下</p><hr><h3 id="为什么？"><a href="#为什么？" class="headerlink" title="为什么？"></a>为什么？</h3><h4 id="为什么没有选择独立部署"><a href="#为什么没有选择独立部署" class="headerlink" title="为什么没有选择独立部署"></a>为什么没有选择独立部署</h4><p>博主是有多余的空闲 Oracle 首尔服务器的，为什么没有在它上面部署博客呢，其实也不是没有尝试。</p><p>主要是自己部署 Hexo 更新不如 SaaS 方便，现在直接提交到 github 各大平台就会编译，CDN 会自动清理旧资源</p><p>自己部署需要自己维护软件环境，服务器环境等等，对于一个没有多大流量的个人博客来说有些浪费了</p><h4 id="为什么选择-Vercel"><a href="#为什么选择-Vercel" class="headerlink" title="为什么选择 Vercel"></a>为什么选择 Vercel</h4><p>Vercel 的函数服务(Functions)可以选择运行的区域。现在它运行在 AWS 波特兰区域上，数据库也运行在 AWS 相同的区域，保证了低延迟。</p><p>Netlify 的函数服务(Functions)不支持选择运行的区域，只能运行在美东，延迟较大。</p><p>Fly.io 可以选亚洲区部署，但是(控制服务&#x2F;CLI&#x2F;网页面板)不能很好的直连，丢包严重，放在 Github Action 才能部署，不然有时候卡住很久。</p><h4 id="为什么要配合-CloudFlare"><a href="#为什么要配合-CloudFlare" class="headerlink" title="为什么要配合 CloudFlare"></a>为什么要配合 CloudFlare</h4><p>虽然 Vercel 已经提供了 AGA 全球 CDN ，但是从去年(被墙)开始，已经是重点关注对象，时不时来个阻断，或者过长的 Stalled 时间</p><p>CloudFlare 的 Ping 是最高的，但是它能稳定的访问。他也提供了很多个性化的定制，缓存规则 页面规则等等都是免费的，自动缓解攻击，流量也是无限的。</p><p>其他的服务，看起来 Ping 很低，但是他们都有一个问题，随机丢包，路由不稳，上午 Ping 40 下午可能 Ping 300 了</p><p>还会被时不时卡下脖子，具体表现为随机 Stalled 时间很长</p><hr><p>总的来说可能就是没有 CloudFlare 省心吧</p><p>各位还在折腾的站长，如果想要稳定，还是趁早换上 CloudFlare 算啦</p><hr><p>各路大神们都介绍了部署在国外的博客如何提高在国内访问速度</p><p><a href="https://www.v2ex.com/t/739279">优化托管在国外博客的国内访问速度</a><br><a href="https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost/5/">零成本搭建现代博客之优化国内访问速度</a><br><a href="https://blog.skk.moe/post/deploy-blog-to-cf-workers-site/">将 Hexo 部署到 Cloudflare Workers Site 上的趟坑记录</a><br><a href="https://www.tangruiping.com/post/github-coding-ci-cd-hexo-cdn.html">自动部署 Hexo，多 CDN 线路为网站加速思想</a></p><p>无一例外，<strong>他们自身</strong>，都是采用的 CloudFlare</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CloudFlare</tag>
+      
+      <tag>Network</tag>
+      
+      <tag>Blog</tag>
+      
+      <tag>SaaS</tag>
+      
+      <tag>Free</tag>
+      
+      <tag>CDN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Snap Docker 配置 IPV6 和修复遗留错误</title>
     <link href="/read/snap-docker-daemon-config.html"/>
     <url>/read/snap-docker-daemon-config.html</url>

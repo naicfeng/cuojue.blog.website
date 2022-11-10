@@ -15,8 +15,44 @@
     <atom:link href="https://cuojue.org/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录生活，记录代码，给自己的网络生涯留下一笔精神财富</description>
-    <pubDate>Wed, 09 Nov 2022 05:00:00 GMT</pubDate>
+    <pubDate>Thu, 10 Nov 2022 08:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>兜兜转转还是回到 CloudFlare 的怀抱</title>
+      <link>https://cuojue.org/read/always-back-to-cloudflare.html</link>
+      <guid>https://cuojue.org/read/always-back-to-cloudflare.html</guid>
+      <pubDate>Thu, 10 Nov 2022 08:00:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;由于我国复杂的互联网环境，本博客无法部署在国内，但是国内也需要稳定的访问它。&lt;/p&gt;
+&lt;p&gt;鉴于此博主测试了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vercel 直连&lt;br&gt;Netlify 直连&lt;br&gt;Fly.io 直连&lt;br&gt;Oracle 首尔直连&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之后，还是回到了 CloudFlare + Vercel 的服务&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
+      
+      
+      <category domain="https://cuojue.org/tag/CloudFlare/">CloudFlare</category>
+      
+      <category domain="https://cuojue.org/tag/Network/">Network</category>
+      
+      <category domain="https://cuojue.org/tag/Blog/">Blog</category>
+      
+      <category domain="https://cuojue.org/tag/SaaS/">SaaS</category>
+      
+      <category domain="https://cuojue.org/tag/Free/">Free</category>
+      
+      <category domain="https://cuojue.org/tag/CDN/">CDN</category>
+      
+      
+      <comments>https://cuojue.org/read/always-back-to-cloudflare.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Snap Docker 配置 IPV6 和修复遗留错误</title>
@@ -542,32 +578,6 @@
       
       
       <comments>https://cuojue.org/read/ClashR_for_Android.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>开启全站缓存后关于handsome主题的部分修改</title>
-      <link>https://cuojue.org/read/typecho-cache-handsome.html</link>
-      <guid>https://cuojue.org/read/typecho-cache-handsome.html</guid>
-      <pubDate>Sat, 29 Feb 2020 07:18:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;总体来说，由 php 实现的实时反馈，cookies 等渲染，需要替换成由 javascript 来本地渲染&lt;/p&gt;
-&lt;h2 id=&quot;左侧边栏&quot;&gt;&lt;a href=&quot;#左侧边栏&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cuojue.org/c/code/">代码分享</category>
-      
-      
-      
-      <comments>https://cuojue.org/read/typecho-cache-handsome.html#disqus_thread</comments>
       
     </item>
     

@@ -6,7 +6,7 @@
   <link href="https://cuojue.org/atom.xml" rel="self"/>
   
   <link href="https://cuojue.org/"/>
-  <updated>2022-11-09T05:00:00.000Z</updated>
+  <updated>2022-11-10T08:00:00.000Z</updated>
   <id>https://cuojue.org/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>兜兜转转还是回到 CloudFlare 的怀抱</title>
+    <link href="https://cuojue.org/read/always-back-to-cloudflare.html"/>
+    <id>https://cuojue.org/read/always-back-to-cloudflare.html</id>
+    <published>2022-11-10T08:00:00.000Z</published>
+    <updated>2022-11-10T08:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;由于我国复杂的互联网环境，本博客无法部署在国内，但是国内也需要稳定的访问它。&lt;/p&gt;
+&lt;p&gt;鉴于此博主测试了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vercel 直连&lt;br&gt;Netlify 直连&lt;br&gt;Fly.io 直连&lt;br&gt;Oracle 首尔直连&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之后，还是回到了 CloudFlare + Vercel 的服务&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="CloudFlare" scheme="https://cuojue.org/tag/CloudFlare/"/>
+    
+    <category term="Network" scheme="https://cuojue.org/tag/Network/"/>
+    
+    <category term="Blog" scheme="https://cuojue.org/tag/Blog/"/>
+    
+    <category term="SaaS" scheme="https://cuojue.org/tag/SaaS/"/>
+    
+    <category term="Free" scheme="https://cuojue.org/tag/Free/"/>
+    
+    <category term="CDN" scheme="https://cuojue.org/tag/CDN/"/>
+    
+  </entry>
   
   <entry>
     <title>Snap Docker 配置 IPV6 和修复遗留错误</title>
@@ -502,30 +536,6 @@
     <category term="clashr" scheme="https://cuojue.org/tag/clashr/"/>
     
     <category term="Android" scheme="https://cuojue.org/tag/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开启全站缓存后关于handsome主题的部分修改</title>
-    <link href="https://cuojue.org/read/typecho-cache-handsome.html"/>
-    <id>https://cuojue.org/read/typecho-cache-handsome.html</id>
-    <published>2020-02-29T07:18:00.000Z</published>
-    <updated>2020-02-29T07:18:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;总体来说，由 php 实现的实时反馈，cookies 等渲染，需要替换成由 javascript 来本地渲染&lt;/p&gt;
-&lt;h2 id=&quot;左侧边栏&quot;&gt;&lt;a href=&quot;#左侧边栏&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
-    
     
   </entry>
   
