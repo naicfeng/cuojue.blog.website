@@ -15,8 +15,39 @@
     <atom:link href="https://cuojue.org/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录生活，记录代码，给自己的网络生涯留下一笔精神财富</description>
-    <pubDate>Thu, 10 Nov 2022 08:00:00 GMT</pubDate>
+    <pubDate>Fri, 11 Nov 2022 11:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hexo 更新后部分刷新 CloudFlare 缓存</title>
+      <link>https://cuojue.org/read/hexo-purge-cloudflare-cache.html</link>
+      <guid>https://cuojue.org/read/hexo-purge-cloudflare-cache.html</guid>
+      <pubDate>Fri, 11 Nov 2022 11:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;之的文章 &lt;a href=&quot;/read/run-sh-after-vercel-deploy-complete.html&quot;&gt;Vercel 部署完成后自动执行 Github Action&lt;/a&gt; 讲了如何在 Vercel</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cuojue.org/c/notes/">个人笔记</category>
+      
+      
+      <category domain="https://cuojue.org/tag/Hexo/">Hexo</category>
+      
+      <category domain="https://cuojue.org/tag/CloudFlare/">CloudFlare</category>
+      
+      <category domain="https://cuojue.org/tag/Blog/">Blog</category>
+      
+      
+      <comments>https://cuojue.org/read/hexo-purge-cloudflare-cache.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>兜兜转转还是回到 CloudFlare 的怀抱</title>
@@ -553,31 +584,6 @@
       
       
       <comments>https://cuojue.org/read/ClashR_Core.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>分享一个ClashR for Android客户端</title>
-      <link>https://cuojue.org/read/ClashR_for_Android.html</link>
-      <guid>https://cuojue.org/read/ClashR_for_Android.html</guid>
-      <pubDate>Mon, 02 Mar 2020 07:43:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;搜了一下，发现没有最新版的 ClashR Android 客户端 自己编译了一个，分享给有需要的朋友吧&lt;/p&gt;</description>
-      
-      
-      
-      
-      <category domain="https://cuojue.org/c/code/">代码分享</category>
-      
-      
-      <category domain="https://cuojue.org/tag/clash/">clash</category>
-      
-      <category domain="https://cuojue.org/tag/clashr/">clashr</category>
-      
-      <category domain="https://cuojue.org/tag/Android/">Android</category>
-      
-      
-      <comments>https://cuojue.org/read/ClashR_for_Android.html#disqus_thread</comments>
       
     </item>
     

@@ -1,3 +1,4 @@
+https://cuojue.org/read/hexo-purge-cloudflare-cache.html
 https://cuojue.org/read/always-back-to-cloudflare.html
 https://cuojue.org/read/snap-docker-daemon-config.html
 https://cuojue.org/read/run-sh-after-vercel-deploy-complete.html
@@ -7,4 +8,3 @@ https://cuojue.org/read/Cloudflare-certificate-authority.html
 https://cuojue.org/read/lsposed.html
 https://cuojue.org/read/nginx-disable-cbc-ciphers.html
 https://cuojue.org/read/google-gts-free-ssl.html
-https://cuojue.org/read/backup-sh.html

@@ -6,7 +6,7 @@
   <link href="https://cuojue.org/atom.xml" rel="self"/>
   
   <link href="https://cuojue.org/"/>
-  <updated>2022-11-10T08:00:00.000Z</updated>
+  <updated>2022-11-11T11:00:00.000Z</updated>
   <id>https://cuojue.org/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 更新后部分刷新 CloudFlare 缓存</title>
+    <link href="https://cuojue.org/read/hexo-purge-cloudflare-cache.html"/>
+    <id>https://cuojue.org/read/hexo-purge-cloudflare-cache.html</id>
+    <published>2022-11-11T11:00:00.000Z</published>
+    <updated>2022-11-11T11:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之的文章 &lt;a href=&quot;/read/run-sh-after-vercel-deploy-complete.html&quot;&gt;Vercel 部署完成后自动执行 Github Action&lt;/a&gt; 讲了如何在 Vercel</summary>
+        
+      
+    
+    
+    
+    <category term="个人笔记" scheme="https://cuojue.org/c/notes/"/>
+    
+    
+    <category term="Hexo" scheme="https://cuojue.org/tag/Hexo/"/>
+    
+    <category term="CloudFlare" scheme="https://cuojue.org/tag/CloudFlare/"/>
+    
+    <category term="Blog" scheme="https://cuojue.org/tag/Blog/"/>
+    
+  </entry>
   
   <entry>
     <title>兜兜转转还是回到 CloudFlare 的怀抱</title>
@@ -513,29 +542,6 @@
     <category term="clash" scheme="https://cuojue.org/tag/clash/"/>
     
     <category term="clashr" scheme="https://cuojue.org/tag/clashr/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分享一个ClashR for Android客户端</title>
-    <link href="https://cuojue.org/read/ClashR_for_Android.html"/>
-    <id>https://cuojue.org/read/ClashR_for_Android.html</id>
-    <published>2020-03-02T07:43:00.000Z</published>
-    <updated>2021-01-23T07:43:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;搜了一下，发现没有最新版的 ClashR Android 客户端 自己编译了一个，分享给有需要的朋友吧&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="代码分享" scheme="https://cuojue.org/c/code/"/>
-    
-    
-    <category term="clash" scheme="https://cuojue.org/tag/clash/"/>
-    
-    <category term="clashr" scheme="https://cuojue.org/tag/clashr/"/>
-    
-    <category term="Android" scheme="https://cuojue.org/tag/Android/"/>
     
   </entry>
   
